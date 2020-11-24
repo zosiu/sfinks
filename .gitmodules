@@ -1,0 +1,3 @@
+[submodule "sfinks/vendor/cereal"]
+	path = sfinks/vendor/cereal
+	url = git@github.com:USCiLab/cereal.git
