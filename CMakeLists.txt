@@ -39,4 +39,5 @@ endif(CMAKE_COMPILER_IS_GNUCXX)
 add_subdirectory(sfinks)
 
 add_subdirectory(tic_tac_toe)
+target_link_libraries(${TIC_TAC_TOE_APP_NAME} PRIVATE "sfinks")
 target_link_libraries(${TIC_TAC_TOE_APP_NAME} PRIVATE "tic_tac_toe")
