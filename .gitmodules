@@ -1,3 +1,6 @@
 [submodule "sfinks/vendor/cereal"]
 	path = sfinks/vendor/cereal
 	url = git@github.com:USCiLab/cereal.git
+[submodule "bird_lady/vendor/z3"]
+	path = bird_lady/vendor/z3
+	url = git@github.com:Z3Prover/z3.git
