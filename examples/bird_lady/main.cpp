@@ -6,6 +6,5 @@ using namespace bird_lady;
 
 auto main() -> int {
   Game game(4);
-  for (auto player_id : game.player_ids())
-    std::cout << player_id << std::endl;
+  std::cout << game.resource_count(CardHandle::egg) << std::endl;
 }

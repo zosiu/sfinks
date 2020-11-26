@@ -4,7 +4,8 @@
 
 #include <sfinks/game.hpp>
 
-#include <bird_lady/consts.hpp>
+#include <bird_lady/card_handle.hpp>
+#include <bird_lady/deck.hpp>
 #include <bird_lady/player.hpp>
 
 namespace bird_lady {
@@ -42,6 +43,7 @@ private:
 
   size_t _current_player_id = 0;
   std::vector<Player> _players;
+  Deck _deck;
 };
 
 } // namespace bird_lady

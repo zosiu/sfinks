@@ -5,7 +5,7 @@
 
 namespace bird_lady {
 
-Game::Game(int number_of_players) : _players(number_of_players) {}
+Game::Game(int number_of_players) : _players(number_of_players), _deck(number_of_players) {}
 
 auto Game::is_over() const -> bool { return true; }
 
@@ -23,13 +23,15 @@ auto Game::available_actions() const -> std::vector<ActionId> { return {}; }
 
 auto Game::resource_ids() const -> std::vector<ResourceId> { return {}; }
 
-auto Game::resource_count(const ResourceId &resource_id) const -> int { return 0; }
+auto Game::resource_count(const ResourceId &resource_id) const -> int { return _deck.max_card_count(resource_id); }
 
 auto Game::resource_count_for_player(const ResourceId &resource_id, const PlayerId &player_id) const -> int {
   return player_by_id(player_id).number_of_available_cards(resource_id);
 }
 
 void Game::reset() {
+  _deck.reset();
+
   for (auto &player : _players)
     player.reset();
   _current_player_id = 0;
