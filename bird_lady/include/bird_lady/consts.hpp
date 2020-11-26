@@ -6,6 +6,8 @@
 
 namespace bird_lady {
 
+constexpr size_t board_size = 3;
+
 static const std::unordered_map<size_t, std::unordered_map<CardHandle, size_t>> card_counts_by_player_number = {
     {2,
      {{CardHandle::fruit, 3},

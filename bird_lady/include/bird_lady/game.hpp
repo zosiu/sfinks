@@ -4,6 +4,7 @@
 
 #include <sfinks/game.hpp>
 
+#include <bird_lady/board.hpp>
 #include <bird_lady/card_handle.hpp>
 #include <bird_lady/deck.hpp>
 #include <bird_lady/player.hpp>
@@ -40,10 +41,12 @@ private:
   [[nodiscard]] auto player_by_id(PlayerId player_id) const -> const Player &;
   void switch_to_next_player();
   void switch_to_prev_player();
+  void populate_board();
 
   size_t _current_player_id = 0;
   std::vector<Player> _players;
   Deck _deck;
+  Board _board;
 };
 
 } // namespace bird_lady

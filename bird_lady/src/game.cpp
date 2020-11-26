@@ -1,11 +1,12 @@
 #include <iostream>
 #include <numeric>
 
+#include <bird_lady/consts.hpp>
 #include <bird_lady/game.hpp>
 
 namespace bird_lady {
 
-Game::Game(int number_of_players) : _players(number_of_players), _deck(number_of_players) {}
+Game::Game(int number_of_players) : _players(number_of_players), _deck(number_of_players) { populate_board(); }
 
 auto Game::is_over() const -> bool { return true; }
 
@@ -31,10 +32,13 @@ auto Game::resource_count_for_player(const ResourceId &resource_id, const Player
 
 void Game::reset() {
   _deck.reset();
+  _board.reset();
 
   for (auto &player : _players)
     player.reset();
   _current_player_id = 0;
+
+  populate_board();
 }
 
 void Game::perform_action(const ActionId &action_id, const PlayerId &player_id) { switch_to_next_player(); }
@@ -48,5 +52,11 @@ auto Game::player_by_id(PlayerId player_id) const -> const Player & { return _pl
 void Game::switch_to_next_player() { _current_player_id = (_current_player_id + 1) % _players.size(); }
 
 void Game::switch_to_prev_player() { _current_player_id = (_current_player_id - 1) % _players.size(); }
+
+void Game::populate_board() {
+  for (size_t i = 0; i < board_size; i++) {
+    _board.replace(i, _deck.draw(board_size));
+  }
+}
 
 } // namespace bird_lady
