@@ -33,6 +33,8 @@ void Deck::put_on_top(const std::vector<CardHandle> &cards) {
     _cards.push_front(*it);
 }
 
+auto Deck::initial_contents() const -> const std::unordered_map<CardHandle, size_t> & { return _card_counts; }
+
 void Deck::reset() {
   _cards.clear();
   for (const auto &[card, count] : _card_counts)

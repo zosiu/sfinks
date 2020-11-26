@@ -11,6 +11,7 @@ class Board {
 public:
   Board();
 
+  [[nodiscard]] auto slice(size_t slice_index) const -> std::vector<CardHandle>;
   auto replace(size_t slice_index, const std::vector<CardHandle> &cards) -> std::vector<CardHandle>;
   auto take(size_t slice_index) -> std::vector<CardHandle>;
 

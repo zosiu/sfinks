@@ -8,6 +8,12 @@ namespace bird_lady {
 
 Board::Board() : _cards(CardHandle::none, board_size * board_size) {}
 
+auto Board::slice(size_t slice_index) const -> std::vector<CardHandle> {
+  check_slice_index(slice_index);
+  const std::valarray<CardHandle> slice = _cards[slice_for(slice_index)];
+  return std::vector<CardHandle>(std::begin(slice), std::end(slice));
+}
+
 auto Board::replace(size_t slice_index, const std::vector<CardHandle> &cards) -> std::vector<CardHandle> {
   check_slice_index(slice_index);
 

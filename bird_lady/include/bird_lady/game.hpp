@@ -2,6 +2,8 @@
 
 #include <vector>
 
+#include <cereal/types/vector.hpp>
+
 #include <sfinks/game.hpp>
 
 #include <bird_lady/board.hpp>
@@ -11,11 +13,20 @@
 
 namespace bird_lady {
 
-struct ActionId {};
+struct ActionId {
+  size_t slice_id;
+  std::vector<CardHandle> slice_contents;
+
+  template <class Archive>
+  void serialize(Archive &archive) {
+    archive(cereal::make_nvp("board_slice", slice_id), cereal::make_nvp("cards", slice_contents));
+  }
+};
+
 using PlayerId = size_t;
 using ResourceId = CardHandle;
 
-class Game : sfinks::Game<PlayerId, ActionId, ResourceId> {
+class Game : public sfinks::Game<PlayerId, ActionId, ResourceId> {
 public:
   Game(int number_of_players);
 
@@ -37,7 +48,7 @@ public:
   void undo_action(const ActionId &action_id, const PlayerId &player_id) override;
 
 private:
-  [[nodiscard]] auto current_player() -> Player &;
+  [[nodiscard]] auto player_by_id(PlayerId player_id) -> Player &;
   [[nodiscard]] auto player_by_id(PlayerId player_id) const -> const Player &;
   void switch_to_next_player();
   void switch_to_prev_player();

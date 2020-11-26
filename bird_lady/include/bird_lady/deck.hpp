@@ -18,6 +18,8 @@ public:
   [[nodiscard]] auto draw(size_t n) -> std::vector<CardHandle>;
   void put_on_top(const std::vector<CardHandle> &cards);
 
+  [[nodiscard]] auto initial_contents() const -> const std::unordered_map<CardHandle, size_t> &;
+
   void reset();
 
 private:
