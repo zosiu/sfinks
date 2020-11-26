@@ -3,6 +3,7 @@
 #include <list>
 #include <string>
 #include <unordered_map>
+#include <vector>
 
 #include <cereal/access.hpp>
 
@@ -24,7 +25,7 @@ public:
   void reset();
   void set_exploration_rate(double exploration_rate);
   template <typename ActionId>
-  auto choose_action(const std::unordered_map<ActionId, std::string> &actions_with_resulting_states) -> ActionId;
+  auto choose_action(const std::vector<std::pair<ActionId, std::string>> &actions_with_resulting_states) -> ActionId;
   void process_reward(double reward);
 
 private:
@@ -34,11 +35,13 @@ private:
 
   [[nodiscard]] auto state_value(const std::string &state) const -> double;
   template <typename ActionId>
-  [[nodiscard]] auto random_action(const std::unordered_map<ActionId, std::string> &actions_with_resulting_states) const
-      -> ActionId;
+  [[nodiscard]] auto
+  random_action(const std::vector<std::pair<ActionId, std::string>> &actions_with_resulting_states) const
+      -> std::pair<ActionId, std::string>;
   template <typename ActionId>
-  [[nodiscard]] auto policy_action(const std::unordered_map<ActionId, std::string> &actions_with_resulting_states) const
-      -> ActionId;
+  [[nodiscard]] auto
+  policy_action(const std::vector<std::pair<ActionId, std::string>> &actions_with_resulting_states) const
+      -> std::pair<ActionId, std::string>;
 
   LearningParams _learning_params;
   std::list<std::string> _states_seen;

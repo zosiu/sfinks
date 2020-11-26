@@ -30,7 +30,7 @@ public:
   using State = std::unordered_map<ResourceId, ResourceData>;
   [[nodiscard]] auto state_from_the_point_of_view_of(const PlayerId &player_id) const -> State;
   [[nodiscard]] auto state_after_action(const ActionId &action_id, const PlayerId &player_id) -> State;
-  [[nodiscard]] auto available_actions_with_results() -> std::unordered_map<ActionId, std::string>;
+  [[nodiscard]] auto available_actions_with_results() -> std::vector<std::pair<ActionId, std::string>>;
 };
 
 } // namespace sfinks
