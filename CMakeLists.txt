@@ -24,20 +24,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(TIC_TAC_TOE_APP_NAME "tic_tac_toe_sfinks_example")
-add_executable(${TIC_TAC_TOE_APP_NAME} examples/tic_tac_toe/main.cpp)
-
-target_compile_definitions(${TIC_TAC_TOE_APP_NAME}
-                           PUBLIC "$<$<CONFIG:DEBUG>:DEBUG>")
-target_compile_features(${TIC_TAC_TOE_APP_NAME} PRIVATE cxx_std_17)
-if(CMAKE_COMPILER_IS_GNUCXX)
-  target_compile_options(${TIC_TAC_TOE_APP_NAME} PRIVATE -Werror -Wall -Wextra
-                                                         -Wpedantic)
-endif(CMAKE_COMPILER_IS_GNUCXX)
-
-# --- deps ---
 add_subdirectory(sfinks)
-
 add_subdirectory(tic_tac_toe)
-target_link_libraries(${TIC_TAC_TOE_APP_NAME} PRIVATE "sfinks")
-target_link_libraries(${TIC_TAC_TOE_APP_NAME} PRIVATE "tic_tac_toe")
+add_subdirectory(bird_lady)
+
+add_subdirectory(examples/tic_tac_toe)
+add_subdirectory(examples/bird_lady)
