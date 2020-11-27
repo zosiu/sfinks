@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <numeric>
+#include <stdexcept>
 
 #include <bird_lady/birds_scorer.hpp>
 #include <bird_lady/consts.hpp>
@@ -27,7 +28,7 @@ auto Game::player_score(const PlayerId &player_id) const -> double {
 auto Game::available_actions() const -> std::vector<ActionId> {
   std::vector<ActionId> actions;
   for (const auto slice_id : _board.available_slices())
-    actions.emplace_back(ActionId{slice_id, _board.slice(slice_id)});
+    actions.emplace_back(ActionId{slice_id, _current_player_id, _board.slice(slice_id)});
 
   return actions;
 }
@@ -65,31 +66,35 @@ void Game::reset() {
 }
 
 void Game::perform_action(const ActionId &action_id, const PlayerId &player_id) {
+  if (action_id.player_id != player_id)
+    std::throw_with_nested(std::invalid_argument("player_id mismatch"));
   Player &player = player_by_id(player_id);
   for (const auto card : _board.replace(action_id.slice_id, _deck.draw(consts::board_size)))
     player.acquire_card(card);
 
-  switch_to_next_player();
+  switch_to_next_player(player_id);
 }
 
 void Game::undo_action(const ActionId &action_id, const PlayerId &player_id) {
-  auto [slice_id, cards] = action_id;
+  if (action_id.player_id != player_id)
+    std::throw_with_nested(std::invalid_argument("player_id mismatch"));
   Player &player = player_by_id(player_id);
+  const auto &cards = action_id.slice_contents;
   for (const auto card : cards)
     player.lose_card(card);
 
-  _deck.put_on_top(_board.replace(slice_id, cards));
+  _deck.put_on_top(_board.replace(action_id.slice_id, cards));
 
-  switch_to_prev_player();
+  switch_to_prev_player(player_id);
 }
 
 auto Game::player_by_id(PlayerId player_id) -> Player & { return _players[player_id]; }
 
 auto Game::player_by_id(PlayerId player_id) const -> const Player & { return _players[player_id]; }
 
-void Game::switch_to_next_player() { _current_player_id = (_current_player_id + 1) % _players.size(); }
+void Game::switch_to_next_player(PlayerId player_id) { _current_player_id = (player_id + 1) % _players.size(); }
 
-void Game::switch_to_prev_player() { _current_player_id = (_current_player_id - 1) % _players.size(); }
+void Game::switch_to_prev_player(PlayerId player_id) { _current_player_id = (player_id - 1) % _players.size(); }
 
 void Game::populate_board() {
   for (size_t i = 0; i < consts::board_size; i++) {

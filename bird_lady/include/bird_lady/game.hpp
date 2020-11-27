@@ -13,8 +13,11 @@
 
 namespace bird_lady {
 
+using PlayerId = size_t;
+
 struct ActionId {
   size_t slice_id;
+  PlayerId player_id;
   std::vector<CardHandle> slice_contents;
 
   template <class Archive>
@@ -23,7 +26,6 @@ struct ActionId {
   }
 };
 
-using PlayerId = size_t;
 using ResourceId = CardHandle;
 
 class Game : public sfinks::Game<PlayerId, ActionId, ResourceId> {
@@ -50,8 +52,8 @@ public:
 private:
   [[nodiscard]] auto player_by_id(PlayerId player_id) -> Player &;
   [[nodiscard]] auto player_by_id(PlayerId player_id) const -> const Player &;
-  void switch_to_next_player();
-  void switch_to_prev_player();
+  void switch_to_next_player(PlayerId player_id);
+  void switch_to_prev_player(PlayerId player_id);
   void populate_board();
 
   size_t _current_player_id = 0;
