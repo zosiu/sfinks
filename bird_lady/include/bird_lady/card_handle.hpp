@@ -25,11 +25,11 @@ enum class CardHandle {
   bird_10,
   bird_11,
   bird_12,
+  bird_13,
 
   mystery_bird_01,
   mystery_bird_02,
-  mystery_bird_03,
-  mystery_bird_04
+  mystery_bird_03
 };
 
 } // namespace bird_lady

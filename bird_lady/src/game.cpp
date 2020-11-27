@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <numeric>
 
@@ -35,10 +36,18 @@ auto Game::resource_ids() const -> std::vector<ResourceId> {
   std::vector<ResourceId> resource_ids;
   for (const auto &[card_id, card_count] : _deck.initial_contents())
     resource_ids.push_back(card_id);
+  for (const auto mystery_bird_id : consts::mystery_birds)
+    resource_ids.push_back(mystery_bird_id);
+
   return resource_ids;
 }
 
-auto Game::resource_count(const ResourceId &resource_id) const -> int { return _deck.max_card_count(resource_id); }
+auto Game::resource_count(const ResourceId &resource_id) const -> int {
+  return std::find(consts::mystery_birds.begin(), consts::mystery_birds.end(), resource_id) !=
+                 consts::mystery_birds.end()
+             ? 1
+             : (int)_deck.max_card_count(resource_id);
+}
 
 auto Game::resource_count_for_player(const ResourceId &resource_id, const PlayerId &player_id) const -> int {
   return player_by_id(player_id).number_of_available_cards(resource_id);
