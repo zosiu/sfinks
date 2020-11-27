@@ -25,7 +25,7 @@ BirdsScorer::BirdsScorer(const Player &player)
           {number_of_toys, _context.int_val(player.number_of_available_cards(CardHandle::toy))},
           {number_of_aviaries, _context.int_val(player.number_of_available_cards(CardHandle::aviary))},
           {unhappy_bird_penalty, _context.int_val(consts::unhappy_bird_penalty)},
-          {leftover_food_penalty, _context.int_val(consts::leftover_food_penalty)},
+          {leftover_food_penalty_per_pair, _context.int_val(consts::leftover_food_penalty_per_pair)},
       }) {
   for (const auto &[card_handle, bird] : consts::birds)
     for (int i = 0; i < player.number_of_available_cards(card_handle); i++)
@@ -36,7 +36,8 @@ auto BirdsScorer::score() -> BirdsScoreDetails {
   for (const auto food : {BirdFood::fruit, BirdFood::vegetable, BirdFood::tomato})
     _optimizer.add(z3_food_availability_requirement(food));
 
-  const auto total = z3_birds_score() + z3_leftover_food() / _context.int_val(2) * _z3_consts.at(leftover_food_penalty);
+  const auto total =
+      z3_birds_score() + z3_leftover_food() / _context.int_val(2) * _z3_consts.at(leftover_food_penalty_per_pair);
   _optimizer.maximize(total);
   _optimizer.check();
 
@@ -56,11 +57,10 @@ auto BirdsScorer::score() -> BirdsScoreDetails {
   // ---
 
   int score = m.eval(total).get_numeral_int();
-  int happy_blue_birds = m.eval(z3_number_of_happy_birds(BirdColor::blue)).get_numeral_int();
-  int happy_green_birds = m.eval(z3_number_of_happy_birds(BirdColor::green)).get_numeral_int();
-  int leftover_food_count = m.eval(z3_leftover_food()).get_numeral_int();
+  int happy_birds = m.eval(z3_number_of_happy_birds()).get_numeral_int();
+  int leftover_food = m.eval(z3_leftover_food()).get_numeral_int();
 
-  return {score, happy_blue_birds, happy_green_birds, leftover_food_count};
+  return {score, happy_birds, leftover_food};
 }
 
 void BirdsScorer::register_bird(CardHandle card_handle, const Bird &bird) {
@@ -203,6 +203,14 @@ auto BirdsScorer::z3_number_of_happy_birds(BirdColor color) const -> z3::expr {
                                           _z3_consts.at(one), _z3_consts.at(zero)) +
                                   exp;
                          });
+}
+
+auto BirdsScorer::z3_number_of_happy_birds() const -> z3::expr {
+  return std::accumulate(
+      _birds.begin(), _birds.end(), _z3_consts.at(zero), [this](const auto &exp, const auto &bird_data) {
+        return z3::ite(z3_bird_unhappiness(bird_data) == _z3_consts.at(zero), _z3_consts.at(one), _z3_consts.at(zero)) +
+               exp;
+      });
 }
 
 } // namespace bird_lady

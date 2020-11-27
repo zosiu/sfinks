@@ -3,9 +3,9 @@
 #include <numeric>
 #include <stdexcept>
 
-#include <bird_lady/birds_scorer.hpp>
 #include <bird_lady/consts.hpp>
 #include <bird_lady/game.hpp>
+#include <bird_lady/scorer.hpp>
 
 namespace bird_lady {
 
@@ -22,7 +22,12 @@ auto Game::player_ids() const -> std::vector<PlayerId> {
 auto Game::current_player_id() const -> PlayerId { return _current_player_id; }
 
 auto Game::player_score(const PlayerId &player_id) const -> double {
-  return BirdsScorer(player_by_id(player_id)).score().total;
+  int most_toys = 0;
+  for (const auto &player : _players)
+    most_toys = std::max(most_toys, player.number_of_available_cards(CardHandle::toy));
+
+  auto [birds_score, toys_score, aviaries_score, eggs_score] = Scorer(&player_by_id(player_id), most_toys).score();
+  return birds_score + toys_score + aviaries_score + eggs_score;
 }
 
 auto Game::available_actions() const -> std::vector<ActionId> {
