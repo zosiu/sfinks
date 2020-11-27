@@ -1,5 +1,6 @@
 #pragma once
 
+#include <list>
 #include <vector>
 
 #include <cereal/types/vector.hpp>
@@ -19,10 +20,12 @@ struct ActionId {
   size_t slice_id;
   PlayerId player_id;
   std::vector<CardHandle> slice_contents;
+  CardHandle mystery_bird;
 
   template <class Archive>
   void serialize(Archive &archive) {
-    archive(cereal::make_nvp("board_slice", slice_id), cereal::make_nvp("cards", slice_contents));
+    archive(cereal::make_nvp("board_slice", slice_id), cereal::make_nvp("cards", slice_contents),
+            cereal::make_nvp("mystery_bird", mystery_bird));
   }
 };
 
@@ -60,6 +63,7 @@ private:
   std::vector<Player> _players;
   Deck _deck;
   Board _board;
+  std::list<CardHandle> _mystery_birds;
 };
 
 } // namespace bird_lady

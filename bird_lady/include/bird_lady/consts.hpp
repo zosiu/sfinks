@@ -8,6 +8,8 @@
 
 namespace bird_lady::consts {
 
+constexpr size_t board_size = 3;
+
 constexpr int unhappy_bird_penalty = -2;
 constexpr int leftover_food_penalty_per_pair = -1;
 constexpr int no_toys_penalty = -2;
@@ -15,8 +17,9 @@ constexpr int most_toys_reward = 6;
 constexpr int single_aviary_penalty = -2;
 constexpr int egg_reward_per_pair = 2;
 
-constexpr size_t board_size = 3;
 constexpr int maximum_consumable_food = 4;
+
+constexpr int eggs_needed_to_hatch_mystery_bird = 2;
 
 static const std::unordered_map<CardHandle, Bird> birds = {
     {CardHandle::bird_01,
