@@ -6,7 +6,7 @@
 
 namespace bird_lady {
 
-Board::Board() : _cards(CardHandle::none, board_size * board_size) {}
+Board::Board() : _cards(CardHandle::none, consts::board_size * consts::board_size) {}
 
 auto Board::slice(size_t slice_index) const -> std::vector<CardHandle> {
   check_slice_index(slice_index);
@@ -24,13 +24,13 @@ auto Board::replace(size_t slice_index, const std::vector<CardHandle> &cards) ->
 
 auto Board::take(size_t slice_index) -> std::vector<CardHandle> {
   check_slice_availability(slice_index);
-  return replace(slice_index, std::vector<CardHandle>(board_size, CardHandle::none));
+  return replace(slice_index, std::vector<CardHandle>(consts::board_size, CardHandle::none));
 }
 
 auto Board::available_slices() const -> std::vector<size_t> {
   std::vector<size_t> slice_indices;
 
-  for (size_t i = 0; i < board_size * 2; i++)
+  for (size_t i = 0; i < consts::board_size * 2; i++)
     if (is_slice_available(i))
       slice_indices.emplace_back(i);
 
@@ -47,14 +47,14 @@ auto Board::is_slice_available(size_t slice_index) const -> bool {
 void Board::reset() { _cards[true] = CardHandle::none; }
 
 auto Board::slice_for(size_t slice_index) const -> std::slice {
-  if (slice_index >= board_size)
-    return std::slice((slice_index % board_size) * board_size, board_size, 1);
+  if (slice_index >= consts::board_size)
+    return std::slice((slice_index % consts::board_size) * consts::board_size, consts::board_size, 1);
   else
-    return std::slice(slice_index, board_size, board_size);
+    return std::slice(slice_index, consts::board_size, consts::board_size);
 }
 
 void Board::check_slice_index(size_t slice_index) const {
-  if (slice_index >= 2 * board_size)
+  if (slice_index >= 2 * consts::board_size)
     std::throw_with_nested(std::invalid_argument("no such slice"));
 }
 

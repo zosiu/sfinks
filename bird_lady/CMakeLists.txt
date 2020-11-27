@@ -25,4 +25,11 @@ if(CMAKE_COMPILER_IS_GNUCXX)
   target_compile_options(${APP_NAME} PRIVATE -Werror -Wall -Wextra -Wpedantic)
 endif(CMAKE_COMPILER_IS_GNUCXX)
 
+set(Z3_LIB "vendor/z3")
+add_subdirectory(${Z3_LIB})
+set(Z3_BUILD_LIBZ3_SHARED
+    OFF
+    CACHE INTERNAL "")
+target_link_libraries(${APP_NAME} PRIVATE "libz3")
+
 target_link_libraries(${APP_NAME} PRIVATE sfinks)

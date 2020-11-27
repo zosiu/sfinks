@@ -8,7 +8,9 @@
 
 namespace bird_lady {
 
-Deck::Deck(int number_of_players) : _card_counts(card_counts_by_player_number.at(number_of_players)) { reset(); }
+Deck::Deck(int number_of_players) : _card_counts(consts::card_counts_by_player_number.at(number_of_players)) {
+  reset();
+}
 
 auto Deck::size() const -> size_t { return _cards.size(); }
 
