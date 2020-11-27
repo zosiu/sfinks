@@ -9,6 +9,7 @@
 namespace bird_lady::consts {
 
 constexpr int unhappy_bird_penalty = -2;
+constexpr int leftover_food_penalty = -1;
 
 constexpr size_t board_size = 3;
 constexpr int maximum_consumable_food = 4;

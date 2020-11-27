@@ -12,18 +12,21 @@ namespace bird_lady {
 
 BirdsScorer::BirdsScorer(const Player &player)
     : _optimizer(_context),
-      _z3_consts({{zero, _context.int_val(0)},
-                  {one, _context.int_val(1)},
-                  {no_food_type, _context.int_val(no_food_type)},
-                  {fruit_type, _context.int_val(fruit_type)},
-                  {vegetable_type, _context.int_val(vegetable_type)},
-                  {tomato_type, _context.int_val(tomato_type)},
-                  {fruit_available, _context.int_val(player.number_of_available_cards(CardHandle::fruit))},
-                  {vegetable_available, _context.int_val(player.number_of_available_cards(CardHandle::vegetable))},
-                  {tomato_available, _context.int_val(player.number_of_available_cards(CardHandle::tomato))},
-                  {number_of_toys, _context.int_val(player.number_of_available_cards(CardHandle::toy))},
-                  {number_of_aviaries, _context.int_val(player.number_of_available_cards(CardHandle::aviary))},
-                  {unhappy_bird_penalty, _context.int_val(consts::unhappy_bird_penalty)}}) {
+      _z3_consts({
+          {zero, _context.int_val(0)},
+          {one, _context.int_val(1)},
+          {no_food_type, _context.int_val(no_food_type)},
+          {fruit_type, _context.int_val(fruit_type)},
+          {vegetable_type, _context.int_val(vegetable_type)},
+          {tomato_type, _context.int_val(tomato_type)},
+          {fruit_available, _context.int_val(player.number_of_available_cards(CardHandle::fruit))},
+          {vegetable_available, _context.int_val(player.number_of_available_cards(CardHandle::vegetable))},
+          {tomato_available, _context.int_val(player.number_of_available_cards(CardHandle::tomato))},
+          {number_of_toys, _context.int_val(player.number_of_available_cards(CardHandle::toy))},
+          {number_of_aviaries, _context.int_val(player.number_of_available_cards(CardHandle::aviary))},
+          {unhappy_bird_penalty, _context.int_val(consts::unhappy_bird_penalty)},
+          {leftover_food_penalty, _context.int_val(consts::leftover_food_penalty)},
+      }) {
   for (const auto &[card_handle, bird] : consts::birds)
     for (int i = 0; i < player.number_of_available_cards(card_handle); i++)
       register_bird(card_handle, bird);
@@ -33,7 +36,7 @@ auto BirdsScorer::score() -> BirdsScoreDetails {
   for (const auto food : {BirdFood::fruit, BirdFood::vegetable, BirdFood::tomato})
     _optimizer.add(z3_food_availability_requirement(food));
 
-  const auto total = z3_total_score();
+  const auto total = z3_birds_score() + z3_leftover_food() / _context.int_val(2) * _z3_consts.at(leftover_food_penalty);
   _optimizer.maximize(total);
   _optimizer.check();
 
@@ -55,8 +58,9 @@ auto BirdsScorer::score() -> BirdsScoreDetails {
   int score = m.eval(total).get_numeral_int();
   int happy_blue_birds = m.eval(z3_number_of_happy_birds(BirdColor::blue)).get_numeral_int();
   int happy_green_birds = m.eval(z3_number_of_happy_birds(BirdColor::green)).get_numeral_int();
+  int leftover_food_count = m.eval(z3_leftover_food()).get_numeral_int();
 
-  return {score, happy_blue_birds, happy_green_birds};
+  return {score, happy_blue_birds, happy_green_birds, leftover_food_count};
 }
 
 void BirdsScorer::register_bird(CardHandle card_handle, const Bird &bird) {
@@ -121,6 +125,17 @@ auto BirdsScorer::z3_food_availability_requirement(BirdFood food) const -> z3::e
   return food_used <= z3_food_available(food);
 }
 
+auto BirdsScorer::z3_leftover_food() const -> z3::expr {
+  auto food_used = std::accumulate(_birds.begin(), _birds.end(), _z3_consts.at(zero),
+                                   [this](const auto &exp, const auto &bird_data) {
+                                     return z3::ite(z3_bird_unhappiness(bird_data) == _z3_consts.at(zero),
+                                                    z3_bird_proper_food_count(bird_data), _z3_consts.at(zero)) +
+                                            exp;
+                                   });
+  return _z3_consts.at(fruit_available) + _z3_consts.at(vegetable_available) + _z3_consts.at(tomato_available) -
+         food_used;
+};
+
 auto BirdsScorer::z3_bird_unhappiness(const Z3BirdData &bird_data) const -> z3::expr {
   const Bird &bird = consts::birds.at(bird_data.bird_id);
   switch (bird.feeding.happy_when) {
@@ -175,7 +190,7 @@ auto BirdsScorer::z3_bird_score(const Z3BirdData &bird_data) -> z3::expr {
                  scoring_expr * _context.int_val(bird.scoring.multiplier), _z3_consts.at(unhappy_bird_penalty));
 }
 
-auto BirdsScorer::z3_total_score() -> z3::expr {
+auto BirdsScorer::z3_birds_score() -> z3::expr {
   return std::accumulate(_birds.begin(), _birds.end(), _z3_consts.at(zero),
                          [this](const auto &exp, const auto &bird_data) { return z3_bird_score(bird_data) + exp; });
 }

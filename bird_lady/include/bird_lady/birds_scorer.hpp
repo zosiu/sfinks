@@ -16,7 +16,6 @@ struct BirdsScoreDetails {
   int total;
   int happy_blue_birds_count;
   int happy_green_birds_count;
-  int happy_birds_count;
   int leftover_food_count;
 };
 
@@ -38,7 +37,8 @@ private:
     tomato_available,
     number_of_toys = 30,
     number_of_aviaries,
-    unhappy_bird_penalty = 40
+    unhappy_bird_penalty = 40,
+    leftover_food_penalty
   };
   struct Z3BirdData {
     CardHandle bird_id;
@@ -50,10 +50,11 @@ private:
   [[nodiscard]] auto z3_food_type(BirdFood food) const -> const z3::expr &;
   [[nodiscard]] auto z3_food_available(BirdFood food) const -> const z3::expr &;
   [[nodiscard]] auto z3_food_availability_requirement(BirdFood food) const -> z3::expr;
+  [[nodiscard]] auto z3_leftover_food() const -> z3::expr;
   [[nodiscard]] auto z3_bird_unhappiness(const Z3BirdData &bird_data) const -> z3::expr;
   [[nodiscard]] auto z3_bird_proper_food_count(const Z3BirdData &bird_data) const -> z3::expr;
   [[nodiscard]] auto z3_bird_score(const Z3BirdData &bird_data) -> z3::expr;
-  [[nodiscard]] auto z3_total_score() -> z3::expr;
+  [[nodiscard]] auto z3_birds_score() -> z3::expr;
   [[nodiscard]] auto z3_number_of_happy_birds(BirdColor color) const -> z3::expr;
 
   z3::context _context;
