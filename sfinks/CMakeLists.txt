@@ -33,7 +33,7 @@ set(LIB_DIR vendor)
 set(CEREAL_DIR "${LIB_DIR}/cereal")
 add_subdirectory(${CEREAL_DIR})
 set(SKIP_PERFORMANCE_COMPARISON
-    OFF
+    ON
     CACHE INTERNAL "")
 set(JUST_INSTALL_CEREAL
     ON

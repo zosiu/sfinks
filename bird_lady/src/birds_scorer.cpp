@@ -71,7 +71,7 @@ void BirdsScorer::register_bird(CardHandle card_handle, const Bird &bird) {
     bird_data.z3_color_consts.emplace(color, _context.int_val(bird.colors.find(color) == bird.colors.end() ? 0 : 1));
 
   for (const auto &[food, quantity] : bird.feeding.food_requirements) {
-    for (int i = 0; i < quantity; i++) {
+    for (size_t i = 0; i < quantity; i++) {
       std::string food_var_name =
           "bird_" + std::to_string(bird_id) + "_food_" + std::to_string(bird_data.z3_food_vars.size());
       auto it = bird_data.z3_food_vars.emplace(bird_data.z3_food_vars.end(), _context.int_const(food_var_name.c_str()));
@@ -134,7 +134,7 @@ auto BirdsScorer::z3_leftover_food() const -> z3::expr {
                                    });
   return _z3_consts.at(fruit_available) + _z3_consts.at(vegetable_available) + _z3_consts.at(tomato_available) -
          food_used;
-};
+}
 
 auto BirdsScorer::z3_bird_unhappiness(const Z3BirdData &bird_data) const -> z3::expr {
   const Bird &bird = consts::birds.at(bird_data.bird_id);
