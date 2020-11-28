@@ -29,6 +29,7 @@ auto Board::take(size_t slice_index) -> std::vector<CardHandle> {
 
 auto Board::available_slices() const -> std::vector<size_t> {
   std::vector<size_t> slice_indices;
+  slice_indices.reserve(consts::board_size * 2);
 
   for (size_t i = 0; i < consts::board_size * 2; i++)
     if (is_slice_available(i))

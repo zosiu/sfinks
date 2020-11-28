@@ -23,6 +23,7 @@ auto Deck::draw(size_t n) -> std::vector<CardHandle> {
   if (n > _cards.size())
     std::throw_with_nested(std::invalid_argument("not enough cards to draw from"));
   std::vector<CardHandle> drawn_cards;
+  drawn_cards.reserve(n);
 
   for (size_t i = 0; i < n; i++)
     drawn_cards.emplace_back(draw_top());

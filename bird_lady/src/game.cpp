@@ -36,16 +36,18 @@ auto Game::player_score(const PlayerId &player_id) const -> double {
 
 auto Game::available_actions() const -> std::vector<ActionId> {
   std::vector<ActionId> actions;
+  actions.reserve(consts::board_size * 4);
+  const auto available_slices = _board.available_slices();
+
+  for (const auto slice_id : available_slices)
+    actions.emplace_back(ActionId{slice_id, _current_player_id, _board.slice(slice_id), CardHandle::none});
+
   if (player_by_id(_current_player_id).number_of_available_cards(CardHandle::egg) >=
           consts::eggs_needed_to_hatch_mystery_bird &&
-      !_mystery_birds.empty()) {
+      !_mystery_birds.empty())
     for (auto mystery_bird : _mystery_birds)
-      for (const auto slice_id : _board.available_slices())
+      for (const auto slice_id : available_slices)
         actions.emplace_back(ActionId{slice_id, _current_player_id, _board.slice(slice_id), mystery_bird});
-  } else {
-    for (const auto slice_id : _board.available_slices())
-      actions.emplace_back(ActionId{slice_id, _current_player_id, _board.slice(slice_id), CardHandle::none});
-  }
 
   return actions;
 }

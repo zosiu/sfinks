@@ -50,9 +50,11 @@ auto Game<PlayerId, ActionId, ResourceId>::state_after_action(const ActionId &ac
 template <typename PlayerId, typename ActionId, typename ResourceId>
 auto Game<PlayerId, ActionId, ResourceId>::available_actions_with_results()
     -> std::vector<std::pair<ActionId, std::string>> {
+  const auto actions = available_actions();
   std::vector<std::pair<ActionId, std::string>> actions_with_resulting_states;
+  actions_with_resulting_states.reserve(actions.size());
   const PlayerId current_player = current_player_id();
-  for (const auto &action_id : available_actions())
+  for (const auto &action_id : actions)
     actions_with_resulting_states.emplace_back(
         action_id, encode_state<PlayerId, ActionId, ResourceId>(state_after_action(action_id, current_player)));
   return actions_with_resulting_states;
