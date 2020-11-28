@@ -1,5 +1,4 @@
 #include <algorithm>
-#include <iostream>
 #include <numeric>
 #include <stdexcept>
 
@@ -82,6 +81,9 @@ void Game::reset() {
   _current_player_id = 0;
 
   populate_board();
+  _mystery_birds.clear();
+  for (const auto mystery_bird: consts::mystery_birds)
+    _mystery_birds.push_back(mystery_bird);
 }
 
 void Game::perform_action(const ActionId &action_id, const PlayerId &player_id) {
