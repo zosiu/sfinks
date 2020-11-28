@@ -1,5 +1,5 @@
-#include <iostream>
 #include <chrono>
+#include <iostream>
 
 #include <bird_lady/game.hpp>
 #include <sfinks/engine.hpp>
@@ -17,6 +17,6 @@ auto main() -> int {
   auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(after_learn - before_learn).count();
   std::cout << "learning " << num_of_learn_games << " games took " << duration << " milliseconds" << std::endl;
 
-  constexpr int num_of_play_games = 10;
+  constexpr int num_of_play_games = 100;
   engine.play(num_of_play_games);
 }

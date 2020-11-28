@@ -1,10 +1,12 @@
 #pragma once
 
 #include <algorithm>
+#include <chrono>
 #include <cmath>
 #include <fstream>
 #include <limits>
 #include <random>
+#include <sstream>
 #include <stdexcept>
 
 #include <cereal/archives/json.hpp>
@@ -145,7 +147,10 @@ void Engine<PlayerId, ActionId, ResourceId>::dump_agents_data() const {
 
 template <typename PlayerId, typename ActionId, typename ResourceId>
 void Engine<PlayerId, ActionId, ResourceId>::dump_history() const {
-  std::ofstream outfile(file_handle(_history_file_name, DataFormat::json));
+  std::stringstream ss;
+  ss << _history_file_name << "_";
+  ss << std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+  std::ofstream outfile(file_handle(ss.str(), DataFormat::json));
   cereal::JSONOutputArchive archive(outfile);
   archive(cereal::make_nvp("history", _history));
 }
