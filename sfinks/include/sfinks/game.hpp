@@ -19,9 +19,9 @@ public:
   [[nodiscard]] virtual auto available_actions() const -> std::vector<ActionId> = 0;
 
   [[nodiscard]] virtual auto resource_ids() const -> std::vector<ResourceId> = 0;
-  [[nodiscard]] virtual auto resource_count(const ResourceId &resource_id) const -> int = 0;
+  [[nodiscard]] virtual auto resource_count(const ResourceId &resource_id) const -> size_t = 0;
   [[nodiscard]] virtual auto resource_count_for_player(const ResourceId &resource_id, const PlayerId &player_id) const
-      -> int = 0;
+      -> size_t = 0;
 
   virtual void reset() = 0;
   virtual void perform_action(const ActionId &action_id, const PlayerId &player_id) = 0;

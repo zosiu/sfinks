@@ -1,31 +1,35 @@
 #pragma once
 
-#include <valarray>
-#include <vector>
+#include <array>
 
 #include <bird_lady/card_handle.hpp>
 
 namespace bird_lady {
 
+struct BoardSlice {
+  CardHandle first;
+  CardHandle second;
+};
+
 class Board {
 public:
-  Board();
+  static constexpr int size = 2;
+  static constexpr auto slice_ids = std::array<size_t, size * size>{0, 1, 2, 3};
 
-  [[nodiscard]] auto slice(size_t slice_index) const -> std::vector<CardHandle>;
-  auto replace(size_t slice_index, const std::vector<CardHandle> &cards) -> std::vector<CardHandle>;
-  auto take(size_t slice_index) -> std::vector<CardHandle>;
-
-  [[nodiscard]] auto available_slices() const -> std::vector<size_t>;
-  [[nodiscard]] auto is_slice_available(size_t slice_index) const -> bool;
+  [[nodiscard]] auto slice(size_t slice_index) const -> BoardSlice;
+  auto replace(size_t slice_index, BoardSlice cards) -> BoardSlice;
+  auto take(size_t slice_index) -> BoardSlice;
 
   void reset();
 
 private:
-  [[nodiscard]] auto slice_for(size_t slice_index) const -> std::slice;
+  void write_slice(size_t slice_index, BoardSlice slice);
   void check_slice_index(size_t slice_index) const;
-  void check_slice_availability(size_t slice_index) const;
 
-  std::valarray<CardHandle> _cards;
+  CardHandle _card_0 = CardHandle::none;
+  CardHandle _card_1 = CardHandle::none;
+  CardHandle _card_2 = CardHandle::none;
+  CardHandle _card_3 = CardHandle::none;
 };
 
 } // namespace bird_lady

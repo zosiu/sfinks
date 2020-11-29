@@ -8,39 +8,21 @@
 
 namespace bird_lady {
 
-Deck::Deck(int number_of_players) : _card_counts(consts::card_counts_by_player_number.at(number_of_players)) {
-  reset();
-}
+Deck::Deck() { reset(); }
 
 auto Deck::size() const -> size_t { return _cards.size(); }
 
-auto Deck::max_card_count(CardHandle card) const -> size_t {
-  const auto it = _card_counts.find(card);
-  return it == _card_counts.end() ? 0 : it->second;
-}
-
-auto Deck::draw(size_t n) -> std::vector<CardHandle> {
-  if (n > _cards.size())
+auto Deck::draw_for_board() -> BoardSlice {
+  if (_cards.size() < Board::size)
     std::throw_with_nested(std::invalid_argument("not enough cards to draw from"));
-  std::vector<CardHandle> drawn_cards;
-  drawn_cards.reserve(n);
-
-  for (size_t i = 0; i < n; i++)
-    drawn_cards.emplace_back(draw_top());
-
-  return drawn_cards;
+  return {draw_top(), draw_top()};
 }
 
-void Deck::put_on_top(const std::vector<CardHandle> &cards) {
-  for (auto it = cards.rbegin(); it != cards.rend(); ++it)
-    _cards.push_front(*it);
-}
-
-auto Deck::initial_contents() const -> const std::unordered_map<CardHandle, size_t> & { return _card_counts; }
+void Deck::put_on_top(CardHandle card) { _cards.push_front(card); }
 
 void Deck::reset() {
   _cards.clear();
-  for (const auto &[card, count] : _card_counts)
+  for (const auto &[card, count] : consts::card_counts)
     _cards.insert(_cards.end(), count, card);
   shuffle();
 }

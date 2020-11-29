@@ -35,9 +35,9 @@ auto Game::resource_ids() const -> std::vector<ResourceId> {
   return resource_ids;
 }
 
-auto Game::resource_count(const ResourceId & /*resource_id*/) const -> int { return 1; }
+auto Game::resource_count(const ResourceId & /*resource_id*/) const -> size_t { return 1; }
 
-auto Game::resource_count_for_player(const ResourceId &resource_id, const PlayerId &player_id) const -> int {
+auto Game::resource_count_for_player(const ResourceId &resource_id, const PlayerId &player_id) const -> size_t {
   return _board.at(resource_id) == player_id ? 1 : 0;
 }
 

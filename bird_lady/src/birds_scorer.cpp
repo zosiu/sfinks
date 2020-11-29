@@ -1,4 +1,3 @@
-// #include <iostream>
 #include <numeric>
 #include <stdexcept>
 #include <string>
@@ -22,7 +21,6 @@ BirdsScorer::BirdsScorer(const Player &player)
           {fruit_available, _context.int_val(player.number_of_available_cards(CardHandle::fruit))},
           {vegetable_available, _context.int_val(player.number_of_available_cards(CardHandle::vegetable))},
           {tomato_available, _context.int_val(player.number_of_available_cards(CardHandle::tomato))},
-          {number_of_toys, _context.int_val(player.number_of_available_cards(CardHandle::toy))},
           {number_of_aviaries, _context.int_val(player.number_of_available_cards(CardHandle::aviary))},
           {unhappy_bird_penalty, _context.int_val(consts::unhappy_bird_penalty)},
           {leftover_food_penalty_per_pair, _context.int_val(consts::leftover_food_penalty_per_pair)},
@@ -43,19 +41,6 @@ auto BirdsScorer::score() -> BirdsScoreDetails {
 
   z3::model m = _optimizer.get_model();
 
-  // ---
-  // for (const auto &bird_data : _birds) {
-  // std::cout << (int)bird_data.bird_id << std::endl;
-  // std::cout << "score: " << m.eval(z3_bird_score(bird_data)).get_numeral_int() << std::endl;
-  // for (const auto &food_var : bird_data.z3_food_vars)
-  // std::cout << "\t" << m.eval(food_var).get_numeral_int() << std::endl;
-  // }
-  // std::cout << "---" << std::endl;
-  // std::cout << "---" << std::endl;
-  // std::cout << _optimizer << std::endl;
-  // std::cout << "---" << std::endl;
-  // ---
-
   int score = m.eval(total).get_numeral_int();
   int happy_birds = m.eval(z3_number_of_happy_birds()).get_numeral_int();
   int leftover_food = m.eval(z3_leftover_food()).get_numeral_int();
@@ -68,7 +53,7 @@ void BirdsScorer::register_bird(CardHandle card_handle, const Bird &bird) {
   const size_t bird_id = _birds.size();
 
   for (const auto color : {BirdColor::blue, BirdColor::green})
-    bird_data.z3_color_consts.emplace(color, _context.int_val(bird.colors.find(color) == bird.colors.end() ? 0 : 1));
+    bird_data.z3_color_consts.emplace(color, _context.int_val(bird.color == color ? 0 : 1));
 
   for (const auto &[food, quantity] : bird.feeding.food_requirements) {
     for (size_t i = 0; i < quantity; i++) {
@@ -167,17 +152,11 @@ auto BirdsScorer::z3_bird_score(const Z3BirdData &bird_data) -> z3::expr {
   case BirdScoringType::simple:
     scoring_expr = _context.int_val(1);
     break;
-  case BirdScoringType::for_every_green:
-    scoring_expr = z3_number_of_happy_birds(BirdColor::green);
-    break;
   case BirdScoringType::for_every_blue:
     scoring_expr = z3_number_of_happy_birds(BirdColor::blue);
     break;
   case BirdScoringType::for_every_aviary:
     scoring_expr = _z3_consts.at(number_of_aviaries);
-    break;
-  case BirdScoringType::for_every_toy:
-    scoring_expr = _z3_consts.at(number_of_toys);
     break;
   case BirdScoringType::for_every_food_fed:
     scoring_expr = z3_bird_proper_food_count(bird_data);

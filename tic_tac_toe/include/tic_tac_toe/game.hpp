@@ -27,9 +27,9 @@ public:
   [[nodiscard]] auto available_actions() const -> std::vector<ActionId> override;
 
   [[nodiscard]] auto resource_ids() const -> std::vector<ResourceId> override;
-  [[nodiscard]] auto resource_count(const ResourceId &resource_id) const -> int override;
+  [[nodiscard]] auto resource_count(const ResourceId &resource_id) const -> size_t override;
   [[nodiscard]] auto resource_count_for_player(const ResourceId &resource_id, const PlayerId &player_id) const
-      -> int override;
+      -> size_t override;
 
   void reset() override;
   void perform_action(const ActionId &action_id, const PlayerId &player_id) override;

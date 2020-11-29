@@ -5,12 +5,12 @@
 namespace sfinks {
 
 struct ResourceData {
-  int owned_by_player = 0;
-  int available = 0;
+  int owned_by_player;
+  bool more_available;
 
   template <class Archive>
   void serialize(Archive &archive) {
-    archive(CEREAL_NVP(owned_by_player), CEREAL_NVP(available));
+    archive(CEREAL_NVP(owned_by_player), CEREAL_NVP(more_available));
   }
 };
 

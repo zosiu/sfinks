@@ -34,8 +34,7 @@ private:
     fruit_available = 20,
     vegetable_available,
     tomato_available,
-    number_of_toys = 30,
-    number_of_aviaries,
+    number_of_aviaries = 30,
     unhappy_bird_penalty = 40,
     leftover_food_penalty_per_pair
   };

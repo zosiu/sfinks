@@ -12,7 +12,7 @@ template <typename PlayerId, typename ActionId, typename ResourceId>
 auto encode_state(const typename Game<PlayerId, ActionId, ResourceId>::State &state) -> std::string {
   std::stringstream ss;
   for (const auto &[resource_id, resource_data] : state) {
-    ss << resource_data.owned_by_player << "," << resource_data.available << "|";
+    ss << resource_data.owned_by_player << "," << (resource_data.more_available ? 1 : 0) << "|";
   }
   return ss.str();
 }
@@ -30,7 +30,7 @@ auto Game<PlayerId, ActionId, ResourceId>::state_from_the_point_of_view_of(const
       else
         others += resource_count_for_player(resource_id, pid);
 
-    resource_data.available = resource_count(resource_id) - resource_data.owned_by_player - others;
+    resource_data.more_available = resource_count(resource_id) - resource_data.owned_by_player - others > 0;
 
     state.emplace(resource_id, resource_data);
   }

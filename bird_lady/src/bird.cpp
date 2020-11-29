@@ -4,7 +4,7 @@
 
 namespace bird_lady {
 
-Bird::Bird(std::set<BirdColor> colors, BirdFeeding feeding, BirdScoring scoring)
-    : colors(std::move(colors)), feeding(std::move(feeding)), scoring(scoring) {}
+Bird::Bird(BirdColor color, BirdFeeding feeding, BirdScoring scoring)
+    : color(color), feeding(std::move(feeding)), scoring(scoring) {}
 
 } // namespace bird_lady

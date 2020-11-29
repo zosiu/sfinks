@@ -19,13 +19,13 @@ using PlayerId = size_t;
 struct ActionId {
   size_t slice_id;
   PlayerId player_id;
-  std::vector<CardHandle> slice_contents;
+  BoardSlice slice_contents;
   CardHandle mystery_bird;
 
   template <class Archive>
   void serialize(Archive &archive) {
-    archive(cereal::make_nvp("board_slice", slice_id), cereal::make_nvp("cards", slice_contents),
-            cereal::make_nvp("mystery_bird", mystery_bird));
+    archive(cereal::make_nvp("board_slice", slice_id), cereal::make_nvp("card_1", slice_contents.first),
+            cereal::make_nvp("card_2", slice_contents.second), cereal::make_nvp("mystery_bird", mystery_bird));
   }
 };
 
@@ -44,9 +44,9 @@ public:
   [[nodiscard]] auto available_actions() const -> std::vector<ActionId> override;
 
   [[nodiscard]] auto resource_ids() const -> std::vector<ResourceId> override;
-  [[nodiscard]] auto resource_count(const ResourceId &resource_id) const -> int override;
+  [[nodiscard]] auto resource_count(const ResourceId &resource_id) const -> size_t override;
   [[nodiscard]] auto resource_count_for_player(const ResourceId &resource_id, const PlayerId &player_id) const
-      -> int override;
+      -> size_t override;
 
   void reset() override;
   void perform_action(const ActionId &action_id, const PlayerId &player_id) override;
@@ -61,9 +61,9 @@ private:
 
   size_t _current_player_id = 0;
   std::vector<Player> _players;
-  Deck _deck;
-  Board _board;
   std::list<CardHandle> _mystery_birds;
+  Board _board;
+  Deck _deck;
 };
 
 } // namespace bird_lady
