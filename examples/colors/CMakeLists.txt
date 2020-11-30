@@ -1,0 +1,72 @@
+set(APP_NAME_2P "colors_sfinks_example_2p")
+add_executable(${APP_NAME_2P} main_2p.cpp)
+
+target_compile_definitions(${APP_NAME_2P} PUBLIC "$<$<CONFIG:DEBUG>:DEBUG>")
+target_compile_features(${APP_NAME_2P} PRIVATE cxx_std_17)
+if(CMAKE_COMPILER_IS_GNUCXX)
+  target_compile_options(${APP_NAME_2P} PRIVATE -Werror -Wall -Wextra
+                                                -Wpedantic)
+endif(CMAKE_COMPILER_IS_GNUCXX)
+
+target_link_libraries(${APP_NAME_2P} PRIVATE "sfinks")
+target_link_libraries(${APP_NAME_2P} PRIVATE "colors")
+
+# --
+
+set(APP_NAME_3P "colors_sfinks_example_3p")
+add_executable(${APP_NAME_3P} main_3p.cpp)
+
+target_compile_definitions(${APP_NAME_3P} PUBLIC "$<$<CONFIG:DEBUG>:DEBUG>")
+target_compile_features(${APP_NAME_3P} PRIVATE cxx_std_17)
+if(CMAKE_COMPILER_IS_GNUCXX)
+  target_compile_options(${APP_NAME_3P} PRIVATE -Werror -Wall -Wextra
+                                                -Wpedantic)
+endif(CMAKE_COMPILER_IS_GNUCXX)
+
+target_link_libraries(${APP_NAME_3P} PRIVATE "sfinks")
+target_link_libraries(${APP_NAME_3P} PRIVATE "colors")
+
+# --
+
+set(APP_NAME_4P "colors_sfinks_example_4p")
+add_executable(${APP_NAME_4P} main_4p.cpp)
+
+target_compile_definitions(${APP_NAME_4P} PUBLIC "$<$<CONFIG:DEBUG>:DEBUG>")
+target_compile_features(${APP_NAME_4P} PRIVATE cxx_std_17)
+if(CMAKE_COMPILER_IS_GNUCXX)
+  target_compile_options(${APP_NAME_4P} PRIVATE -Werror -Wall -Wextra
+                                                -Wpedantic)
+endif(CMAKE_COMPILER_IS_GNUCXX)
+
+target_link_libraries(${APP_NAME_4P} PRIVATE "sfinks")
+target_link_libraries(${APP_NAME_4P} PRIVATE "colors")
+
+# --
+
+set(APP_NAME_5P "colors_sfinks_example_5p")
+add_executable(${APP_NAME_5P} main_5p.cpp)
+
+target_compile_definitions(${APP_NAME_5P} PUBLIC "$<$<CONFIG:DEBUG>:DEBUG>")
+target_compile_features(${APP_NAME_5P} PRIVATE cxx_std_17)
+if(CMAKE_COMPILER_IS_GNUCXX)
+  target_compile_options(${APP_NAME_5P} PRIVATE -Werror -Wall -Wextra
+                                                -Wpedantic)
+endif(CMAKE_COMPILER_IS_GNUCXX)
+
+target_link_libraries(${APP_NAME_5P} PRIVATE "sfinks")
+target_link_libraries(${APP_NAME_5P} PRIVATE "colors")
+
+# --
+
+set(APP_NAME_6P "colors_sfinks_example_6p")
+add_executable(${APP_NAME_6P} main_6p.cpp)
+
+target_compile_definitions(${APP_NAME_6P} PUBLIC "$<$<CONFIG:DEBUG>:DEBUG>")
+target_compile_features(${APP_NAME_6P} PRIVATE cxx_std_17)
+if(CMAKE_COMPILER_IS_GNUCXX)
+  target_compile_options(${APP_NAME_6P} PRIVATE -Werror -Wall -Wextra
+                                                -Wpedantic)
+endif(CMAKE_COMPILER_IS_GNUCXX)
+
+target_link_libraries(${APP_NAME_6P} PRIVATE "sfinks")
+target_link_libraries(${APP_NAME_6P} PRIVATE "colors")

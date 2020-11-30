@@ -26,7 +26,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(sfinks)
 add_subdirectory(tic_tac_toe)
+add_subdirectory(colors)
 add_subdirectory(bird_lady)
 
 add_subdirectory(examples/tic_tac_toe)
+add_subdirectory(examples/colors)
 add_subdirectory(examples/bird_lady)
