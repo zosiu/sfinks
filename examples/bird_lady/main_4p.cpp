@@ -1,14 +1,15 @@
 #include <chrono>
 #include <iostream>
+#include <string>
 
 #include <bird_lady/game.hpp>
 #include <sfinks/engine.hpp>
 
-using namespace bird_lady;
-
 auto main() -> int {
-  bird_lady::Game game(4);
-  sfinks::Engine engine(&game, "bird_lady_4p_binary_out", sfinks::DataFormat::binary);
+  constexpr size_t num_of_players = 4;
+  bird_lady::Game game(num_of_players);
+  sfinks::Engine engine(&game, "bird_lady_" + std::to_string(num_of_players) + "p_binary_out",
+                        sfinks::DataFormat::binary);
 
   constexpr int num_of_learn_games = 100'000;
   auto before_learn = std::chrono::high_resolution_clock::now();
