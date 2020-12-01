@@ -6,7 +6,7 @@
 
 namespace colors {
 const std::unordered_map<Color, size_t> Game::color_counts = {
-    {Color::red, 6}, {Color::green, 8}, {Color::blue, 4}, {Color::yellow, 6}};
+    {Color::red, 3}, {Color::green, 5}, {Color::blue, 2}, {Color::yellow, 4}};
 
 const size_t Game::color_counts_sum =
     std::accumulate(color_counts.begin(), color_counts.end(), 0,

@@ -15,8 +15,8 @@ auto main() -> int {
   auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(after_learn - before_learn).count();
   std::cout << "learning " << num_of_learn_games << " games took " << duration << " milliseconds" << std::endl;
 
-  constexpr int num_of_play_games = 10'000;
-  engine.play_against_random_opponents(tic_tac_toe::Mark::x, num_of_play_games);
-  engine.play_against_random_opponents(tic_tac_toe::Mark::o, num_of_play_games);
-  engine.play_according_to_policy(num_of_play_games);
+  // constexpr int num_of_play_games = 10'000;
+  // engine.play_against_random_opponents(tic_tac_toe::Mark::x, num_of_play_games);
+  // engine.play_against_random_opponents(tic_tac_toe::Mark::o, num_of_play_games);
+  // engine.play_according_to_policy(num_of_play_games);
 }

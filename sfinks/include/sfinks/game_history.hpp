@@ -29,7 +29,8 @@ struct GameHistory {
 
   template <class Archive>
   void serialize(Archive &archive) {
-    archive(CEREAL_NVP(results), CEREAL_NVP(actions), CEREAL_NVP(state_by_players));
+    archive(CEREAL_NVP(results), CEREAL_NVP(actions));
+    // , CEREAL_NVP(state_by_players));
   }
 };
 

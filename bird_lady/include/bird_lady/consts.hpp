@@ -44,7 +44,7 @@ static const std::array<CardHandle, 2> mystery_birds = {CardHandle::mystery_bird
 
 static const std::unordered_map<CardHandle, size_t> card_counts = {{{CardHandle::fruit, 5},
                                                                     {CardHandle::vegetable, 6},
-                                                                    {CardHandle::tomato, 1},
+                                                                    {CardHandle::tomato, 2},
 
                                                                     {CardHandle::aviary, 4},
                                                                     {CardHandle::egg, 4},

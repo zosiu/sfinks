@@ -44,3 +44,6 @@ notes
 .vs
 CMakeSettings.json
 .z3-*
+
+stats/**/*.json
+stats/**/*.tex

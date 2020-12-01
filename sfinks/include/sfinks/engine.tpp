@@ -58,6 +58,21 @@ void Engine<PlayerId, ActionId, ResourceId>::play_according_to_policy(size_t num
 }
 
 template <typename PlayerId, typename ActionId, typename ResourceId>
+void Engine<PlayerId, ActionId, ResourceId>::play_random(size_t number_of_games_to_play) {
+  for (auto &[player_id, agent] : _agents) {
+    agent.set_greedy(false);
+    agent.set_exploration_rate(1.0);
+  }
+  _history.clear();
+
+  for (size_t i = 0; i < number_of_games_to_play; i++)
+    play_a_single_game(true);
+
+  // dump_agents_data();
+  dump_history("random");
+}
+
+template <typename PlayerId, typename ActionId, typename ResourceId>
 void Engine<PlayerId, ActionId, ResourceId>::play_against_random_opponents(const PlayerId &as_player,
                                                                            size_t number_of_games_to_play) {
   for (auto &[player_id, agent] : _agents) {

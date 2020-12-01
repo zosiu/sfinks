@@ -15,6 +15,7 @@ public:
          DataFormat data_format = DataFormat::json);
   void learn(size_t number_of_games_to_play);
   void play_according_to_policy(size_t number_of_games_to_play);
+  void play_random(size_t number_of_games_to_play);
   void play_against_random_opponents(const PlayerId &as_player, size_t number_of_games_to_play);
   void play_against_greedy_opponents(const PlayerId &as_player, size_t number_of_games_to_play);
 

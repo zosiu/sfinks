@@ -1,0 +1,583 @@
+---
+0:
+  :id: 0
+  :greedy: false
+  :random: true
+  :won: 1738
+  :lost: 7308
+  :tied: 954
+  :winning_scores:
+  - - 15.0
+    - 18
+  - - 14.0
+    - 21
+  - - 12.0
+    - 60
+  - - 11.0
+    - 278
+  - - 10.0
+    - 114
+  - - 8.0
+    - 337
+  - - 7.0
+    - 1362
+  - - 6.0
+    - 138
+  - - 4.0
+    - 255
+  - - 3.0
+    - 109
+  :losing_scores:
+  - - -12.0
+    - 25
+  - - -9.0
+    - 182
+  - - -8.0
+    - 215
+  - - -6.0
+    - 35
+  - - -5.0
+    - 287
+  - - -4.0
+    - 514
+  - - -2.0
+    - 28
+  - - -1.0
+    - 1928
+  - - 0.0
+    - 459
+  - - 2.0
+    - 507
+  - - 3.0
+    - 769
+  - - 4.0
+    - 661
+  - - 6.0
+    - 192
+  - - 7.0
+    - 1214
+  - - 8.0
+    - 269
+  - - 10.0
+    - 23
+  :winning_actions:
+    ? - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: blue
+      - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: green
+    : 264
+    ? - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: blue
+      - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: yellow
+    : 241
+    ? - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: black
+      - player: 0
+        color_taken: green
+    : 265
+    ? - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: green
+    : 185
+    ? - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: black
+      - player: 0
+        color_taken: red
+    : 162
+  :losing_actions:
+    ? - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: black
+    : 444
+    ? - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: blue
+      - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: green
+    : 343
+    ? - player: 0
+        color_taken: blue
+      - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: green
+    : 366
+    ? - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: blue
+      - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: black
+    : 345
+    ? - player: 0
+        color_taken: blue
+      - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: black
+      - player: 0
+        color_taken: green
+    : 382
+1:
+  :id: 1
+  :greedy: false
+  :random: true
+  :won: 1595
+  :lost: 7632
+  :tied: 773
+  :winning_scores:
+  - - 15.0
+    - 3
+  - - 12.0
+    - 10
+  - - 11.0
+    - 86
+  - - 10.0
+    - 84
+  - - 8.0
+    - 448
+  - - 7.0
+    - 1318
+  - - 6.0
+    - 70
+  - - 4.0
+    - 215
+  - - 3.0
+    - 134
+  :losing_scores:
+  - - -12.0
+    - 17
+  - - -9.0
+    - 74
+  - - -8.0
+    - 262
+  - - -6.0
+    - 5
+  - - -5.0
+    - 444
+  - - -4.0
+    - 359
+  - - -2.0
+    - 56
+  - - -1.0
+    - 1525
+  - - 0.0
+    - 907
+  - - 2.0
+    - 632
+  - - 3.0
+    - 1360
+  - - 4.0
+    - 596
+  - - 6.0
+    - 42
+  - - 7.0
+    - 1092
+  - - 8.0
+    - 233
+  - - 10.0
+    - 28
+  :winning_actions:
+    ? - player: 1
+        color_taken: red
+      - player: 1
+        color_taken: blue
+      - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: green
+    : 387
+    ? - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: yellow
+    : 216
+    ? - player: 1
+        color_taken: red
+      - player: 1
+        color_taken: blue
+      - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: yellow
+    : 246
+    ? - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: green
+    : 232
+    ? - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: red
+      - player: 1
+        color_taken: blue
+      - player: 1
+        color_taken: green
+    : 181
+  :losing_actions:
+    ? - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: red
+      - player: 1
+        color_taken: black
+    : 678
+    ? - player: 1
+        color_taken: red
+      - player: 1
+        color_taken: blue
+      - player: 1
+        color_taken: red
+      - player: 1
+        color_taken: black
+    : 465
+    ? - player: 1
+        color_taken: blue
+      - player: 1
+        color_taken: red
+      - player: 1
+        color_taken: black
+      - player: 1
+        color_taken: green
+    : 418
+    ? - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: black
+    : 595
+    ? - player: 1
+        color_taken: blue
+      - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: green
+    : 388
+2:
+  :id: 2
+  :greedy: false
+  :random: false
+  :won: 3183
+  :lost: 5711
+  :tied: 1106
+  :winning_scores:
+  - - 14.0
+    - 2
+  - - 12.0
+    - 7
+  - - 11.0
+    - 1026
+  - - 10.0
+    - 76
+  - - 8.0
+    - 1491
+  - - 7.0
+    - 1011
+  - - 4.0
+    - 19
+  - - 3.0
+    - 650
+  - - -1.0
+    - 7
+  :losing_scores:
+  - - -4.0
+    - 1
+  - - -1.0
+    - 2
+  - - 0.0
+    - 1032
+  - - 3.0
+    - 3841
+  - - 4.0
+    - 260
+  - - 7.0
+    - 540
+  - - 8.0
+    - 35
+  :winning_actions:
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: red
+      - player: 2
+        color_taken: black
+    : 572
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+    : 1211
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: red
+      - player: 2
+        color_taken: black
+      - player: 2
+        color_taken: green
+    : 496
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: red
+    : 859
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: blue
+      - player: 2
+        color_taken: red
+    : 397
+  :losing_actions:
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: black
+    : 1004
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: red
+      - player: 2
+        color_taken: blue
+    : 99
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: blue
+      - player: 2
+        color_taken: green
+    : 260
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: red
+      - player: 2
+        color_taken: black
+    : 3756
+    ? - player: 2
+        color_taken: green
+      - player: 2
+        color_taken: yellow
+      - player: 2
+        color_taken: blue
+      - player: 2
+        color_taken: red
+    : 441
+3:
+  :id: 3
+  :greedy: false
+  :random: true
+  :won: 1501
+  :lost: 7269
+  :tied: 1230
+  :winning_scores:
+  - - 11.0
+    - 530
+  - - 10.0
+    - 82
+  - - 8.0
+    - 686
+  - - 7.0
+    - 910
+  - - 6.0
+    - 26
+  - - 4.0
+    - 131
+  - - 3.0
+    - 358
+  - - 2.0
+    - 2
+  - - -1.0
+    - 6
+  :losing_scores:
+  - - -8.0
+    - 827
+  - - -5.0
+    - 670
+  - - -4.0
+    - 53
+  - - -2.0
+    - 53
+  - - -1.0
+    - 1004
+  - - 0.0
+    - 1112
+  - - 2.0
+    - 92
+  - - 3.0
+    - 1754
+  - - 4.0
+    - 446
+  - - 6.0
+    - 26
+  - - 7.0
+    - 690
+  - - 8.0
+    - 467
+  - - 10.0
+    - 75
+  :winning_actions:
+    ? - player: 3
+        color_taken: green
+      - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: red
+    : 484
+    ? - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: green
+      - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: green
+    : 288
+    ? - player: 3
+        color_taken: red
+      - player: 3
+        color_taken: blue
+      - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: green
+    : 455
+    ? - player: 3
+        color_taken: green
+      - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: green
+    : 242
+    ? - player: 3
+        color_taken: green
+      - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: green
+      - player: 3
+        color_taken: yellow
+    : 156
+  :losing_actions:
+    ? - player: 3
+        color_taken: blue
+      - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: green
+      - player: 3
+        color_taken: black
+    : 549
+    ? - player: 3
+        color_taken: blue
+      - player: 3
+        color_taken: red
+      - player: 3
+        color_taken: black
+      - player: 3
+        color_taken: green
+    : 630
+    ? - player: 3
+        color_taken: green
+      - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: green
+      - player: 3
+        color_taken: black
+    : 625
+    ? - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: red
+      - player: 3
+        color_taken: black
+      - player: 3
+        color_taken: green
+    : 714
+    ? - player: 3
+        color_taken: green
+      - player: 3
+        color_taken: yellow
+      - player: 3
+        color_taken: green
+    : 462

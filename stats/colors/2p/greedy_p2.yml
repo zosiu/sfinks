@@ -1,0 +1,59 @@
+---
+0:
+  :id: 0
+  :greedy: true
+  :random: false
+  :won: 0
+  :lost: 10000
+  :tied: 0
+  :winning_scores: []
+  :losing_scores:
+  - - 10.0
+    - 10000
+  :winning_actions: {}
+  :losing_actions:
+    ? - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: blue
+      - player: 0
+        color_taken: red
+      - player: 0
+        color_taken: black
+      - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: yellow
+      - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: yellow
+    : 10000
+1:
+  :id: 1
+  :greedy: false
+  :random: false
+  :won: 10000
+  :lost: 0
+  :tied: 0
+  :winning_scores:
+  - - 15.0
+    - 10000
+  :losing_scores: []
+  :winning_actions:
+    ? - player: 1
+        color_taken: red
+      - player: 1
+        color_taken: blue
+      - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: green
+      - player: 1
+        color_taken: yellow
+      - player: 1
+        color_taken: green
+    : 10000
+  :losing_actions: {}

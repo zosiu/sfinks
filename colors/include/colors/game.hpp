@@ -13,7 +13,6 @@ enum class Color { none, red, green, blue, yellow };
 
 using PlayerId = size_t;
 using ResourceId = Color;
-
 struct ActionId {
   PlayerId player;
   Color color_to_take;
@@ -72,5 +71,29 @@ private:
   size_t _current_player_id = 0;
   std::unordered_map<Color, size_t> _available_colors;
 };
+
+template <class Archive>
+inline auto save_minimal(const Archive & /*archive*/, Color color) -> std::string {
+  switch (color) {
+  case Color::none:
+    return "black";
+  case Color::red:
+    return "red";
+  case Color::green:
+    return "green";
+  case Color::blue:
+    return "blue";
+  case Color::yellow:
+    return "yellow";
+  default:
+    return "unknown color";
+  }
+}
+
+template <class Archive>
+inline void load_minimal(const Archive & /*archive*/, Color &color, const std::string & /*value*/) {
+  // TODO
+  color = Color::none;
+}
 
 } // namespace colors
