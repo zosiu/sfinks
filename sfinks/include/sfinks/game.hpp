@@ -1,7 +1,11 @@
 #pragma once
 
+#include <string>
+#include <tuple>
 #include <unordered_map>
 #include <vector>
+
+#include <sfinks/action_result.hpp>
 
 namespace sfinks {
 
@@ -29,8 +33,9 @@ public:
 
   using State = std::unordered_map<ResourceId, ResourceData>;
   [[nodiscard]] auto state_from_the_point_of_view_of(const PlayerId &player_id) const -> State;
-  [[nodiscard]] auto state_after_action(const ActionId &action_id, const PlayerId &player_id) -> State;
-  [[nodiscard]] auto available_actions_with_results() -> std::vector<std::pair<ActionId, std::string>>;
+  [[nodiscard]] auto action_result(const ActionId &action_id, const PlayerId &player_id, bool include_score = false)
+      -> ActionResult<ActionId>;
+  [[nodiscard]] auto available_actions_with_results(bool include_score = false) -> std::vector<ActionResult<ActionId>>;
 };
 
 } // namespace sfinks

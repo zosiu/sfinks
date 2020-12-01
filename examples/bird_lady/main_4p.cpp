@@ -19,5 +19,5 @@ auto main() -> int {
   std::cout << "learning " << num_of_learn_games << " games took " << duration << " milliseconds" << std::endl;
 
   constexpr int num_of_play_games = 1000;
-  engine.play(num_of_play_games);
+  engine.play_according_to_policy(num_of_play_games);
 }

@@ -43,15 +43,48 @@ void Engine<PlayerId, ActionId, ResourceId>::learn(size_t number_of_games_to_pla
 }
 
 template <typename PlayerId, typename ActionId, typename ResourceId>
-void Engine<PlayerId, ActionId, ResourceId>::play(size_t number_of_games_to_play) {
-  for (auto &[player_id, agent] : _agents)
+void Engine<PlayerId, ActionId, ResourceId>::play_according_to_policy(size_t number_of_games_to_play) {
+  for (auto &[player_id, agent] : _agents) {
+    agent.set_greedy(false);
     agent.set_exploration_rate(0.0);
+  }
+  _history.clear();
 
   for (size_t i = 0; i < number_of_games_to_play; i++)
     play_a_single_game(true);
 
-  dump_agents_data();
-  dump_history();
+  // dump_agents_data();
+  dump_history("according_to_policy");
+}
+
+template <typename PlayerId, typename ActionId, typename ResourceId>
+void Engine<PlayerId, ActionId, ResourceId>::play_against_random_opponents(const PlayerId &as_player,
+                                                                           size_t number_of_games_to_play) {
+  for (auto &[player_id, agent] : _agents) {
+    agent.set_greedy(false);
+    agent.set_exploration_rate(as_player == player_id ? 0.0 : 1.0);
+  }
+  _history.clear();
+
+  for (size_t i = 0; i < number_of_games_to_play; i++)
+    play_a_single_game(true);
+
+  dump_history("against_random");
+}
+
+template <typename PlayerId, typename ActionId, typename ResourceId>
+void Engine<PlayerId, ActionId, ResourceId>::play_against_greedy_opponents(const PlayerId &as_player,
+                                                                           size_t number_of_games_to_play) {
+  for (auto &[player_id, agent] : _agents) {
+    agent.set_exploration_rate(0.0);
+    agent.set_greedy(as_player != player_id);
+  }
+  _history.clear();
+
+  for (size_t i = 0; i < number_of_games_to_play; i++)
+    play_a_single_game(true);
+
+  dump_history("against_greedy");
 }
 
 template <typename PlayerId, typename ActionId, typename ResourceId>
@@ -146,10 +179,11 @@ void Engine<PlayerId, ActionId, ResourceId>::dump_agents_data() const {
 }
 
 template <typename PlayerId, typename ActionId, typename ResourceId>
-void Engine<PlayerId, ActionId, ResourceId>::dump_history() const {
+void Engine<PlayerId, ActionId, ResourceId>::dump_history(const std::string &mode) const {
   std::stringstream ss;
-  ss << _history_file_name << "_";
-  ss << std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+  ss << _history_file_name << "_" << mode << "_";
+  ss << std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now().time_since_epoch())
+            .count();
   std::ofstream outfile(file_handle(ss.str(), DataFormat::json));
   cereal::JSONOutputArchive archive(outfile);
   archive(cereal::make_nvp("history", _history));
@@ -168,7 +202,8 @@ void Engine<PlayerId, ActionId, ResourceId>::play_a_single_game(bool record_hist
     PlayerId current_player = _game->current_player_id();
     Agent *current_agent = &_agents.at(current_player);
 
-    ActionId choosen_action = current_agent->choose_action(_game->available_actions_with_results());
+    ActionId choosen_action =
+        current_agent->choose_action(_game->available_actions_with_results(current_agent->greedy()));
     _game->perform_action(choosen_action, current_player);
 
     if (history != nullptr)
@@ -176,10 +211,8 @@ void Engine<PlayerId, ActionId, ResourceId>::play_a_single_game(bool record_hist
   }
 
   std::unordered_map<PlayerId, double> scores;
-
-  for (auto &[player_id, agent] : _agents) // TODO: get all scores with a single call maybe?
+  for (auto &[player_id, agent] : _agents)
     scores.emplace(player_id, _game->player_score(player_id));
-
   double winning_score = std::max_element(scores.begin(), scores.end(), [](const auto &p1, const auto &p2) {
                            return p1.second < p2.second;
                          })->second;
@@ -192,7 +225,12 @@ void Engine<PlayerId, ActionId, ResourceId>::play_a_single_game(bool record_hist
                              : losing_penalty);
 
   if (history != nullptr) {
-    history->results = scores;
+    std::unordered_map<PlayerId, AgentScore> results;
+    for (const auto &[player_id, score] : scores) {
+      const Agent &agent = _agents.at(player_id);
+      results[player_id] = {score, agent.greedy(), agent.exploration_rate()};
+    }
+    history->results = results;
 
     for (const auto &[player_id, agent] : _agents)
       history->state_by_players.emplace(player_id, _game->state_from_the_point_of_view_of(player_id));
