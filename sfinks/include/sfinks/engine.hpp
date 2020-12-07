@@ -28,7 +28,7 @@ private:
   [[nodiscard]] auto agents_in_random_order() const -> std::vector<const Agent *>;
   inline void load_agents_data_json();
   inline void load_agents_data_binary();
-  void load_agents_data() const;
+  void load_agents_data();
   void dump_agents_data() const;
   void dump_history(const std::string &mode) const;
   inline void play_a_single_game(bool record_history);

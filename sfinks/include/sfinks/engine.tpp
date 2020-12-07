@@ -4,6 +4,7 @@
 #include <chrono>
 #include <cmath>
 #include <fstream>
+#include <iostream>
 #include <limits>
 #include <random>
 #include <sstream>
@@ -28,7 +29,9 @@ Engine<PlayerId, ActionId, ResourceId>::Engine(Game<PlayerId, ActionId, Resource
     _agents.emplace(player_id, Agent());
   }
 
-  load_agents_data_json();
+  load_agents_data();
+  // for (auto &[player_id, agent] : _agents)
+  // std::cout << agent.number_of_states_seen() << std::endl;
 }
 
 template <typename PlayerId, typename ActionId, typename ResourceId>
@@ -170,7 +173,7 @@ void Engine<PlayerId, ActionId, ResourceId>::load_agents_data_binary() {
 }
 
 template <typename PlayerId, typename ActionId, typename ResourceId>
-void Engine<PlayerId, ActionId, ResourceId>::load_agents_data() const {
+void Engine<PlayerId, ActionId, ResourceId>::load_agents_data() {
   switch (_agents_data_file_format) {
   case DataFormat::json:
     load_agents_data_json();

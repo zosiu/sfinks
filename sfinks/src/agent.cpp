@@ -29,4 +29,6 @@ auto Agent::exploration_rate() const -> double { return _learning_params.explora
 
 auto Agent::greedy() const -> bool { return _greedy; }
 
+auto Agent::number_of_states_seen() const -> size_t { return _state_values.size(); }
+
 } // namespace sfinks

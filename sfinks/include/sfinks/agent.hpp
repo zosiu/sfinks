@@ -32,6 +32,7 @@ public:
   void process_reward(double reward);
   [[nodiscard]] auto exploration_rate() const -> double;
   [[nodiscard]] auto greedy() const -> bool;
+  [[nodiscard]] auto number_of_states_seen() const -> size_t;
 
 private:
   friend class cereal::access;
