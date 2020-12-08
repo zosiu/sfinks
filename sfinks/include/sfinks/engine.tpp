@@ -30,7 +30,7 @@ Engine<PlayerId, ActionId, ResourceId>::Engine(Game<PlayerId, ActionId, Resource
   }
 
   load_agents_data();
-  // for (auto &[player_id, agent] : _agents)
+  // for (const auto &[player_id, agent] : _agents)
   // std::cout << agent.number_of_states_seen() << std::endl;
 }
 

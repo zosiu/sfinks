@@ -12,12 +12,14 @@
   :losing_scores: []
   :winning_actions:
     ? - player: 0
+        color_taken: green
+      - player: 0
+        color_taken: yellow
+      - player: 0
         color_taken: red
       - player: 0
         color_taken: blue
       - player: 0
-        color_taken: green
-      - player: 0
         color_taken: yellow
       - player: 0
         color_taken: green
@@ -25,8 +27,6 @@
         color_taken: yellow
       - player: 0
         color_taken: green
-      - player: 0
-        color_taken: yellow
     : 10000
   :losing_actions: {}
 1:

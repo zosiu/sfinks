@@ -52,7 +52,7 @@
   :tied: 0
   :winning_scores: []
   :losing_scores:
-  - - -5.0
+  - - 3.0
     - 10000
   :winning_actions: {}
   :losing_actions:
@@ -63,7 +63,7 @@
       - player: 2
         color_taken: green
       - player: 2
-        color_taken: black
+        color_taken: yellow
     : 10000
 3:
   :id: 3
@@ -78,8 +78,6 @@
   :losing_scores: []
   :winning_actions:
     ? - player: 3
-        color_taken: yellow
-      - player: 3
         color_taken: green
       - player: 3
         color_taken: yellow
