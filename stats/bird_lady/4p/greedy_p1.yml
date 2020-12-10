@@ -3,546 +3,429 @@
   :id: 3
   :greedy: true
   :random: false
-  :won: 2338
-  :lost: 6773
-  :tied: 889
+  :won: 2081
+  :lost: 7043
+  :tied: 876
   :winning_scores:
   - - 12.0
-    - 53
+    - 55
   - - 11.0
-    - 141
+    - 148
   - - 10.0
-    - 255
-  - - 9.0
-    - 155
-  - - 8.0
-    - 544
-  - - 7.0
-    - 869
-  - - 6.0
-    - 539
-  - - 5.0
-    - 375
-  - - 4.0
     - 249
+  - - 9.0
+    - 114
+  - - 8.0
+    - 549
+  - - 7.0
+    - 769
+  - - 6.0
+    - 485
+  - - 5.0
+    - 350
+  - - 4.0
+    - 208
   - - 3.0
-    - 25
+    - 14
   - - 2.0
-    - 20
+    - 15
   - - 1.0
-    - 2
+    - 1
   :losing_scores:
   - - -4.0
-    - 5
+    - 3
   - - -3.0
-    - 22
+    - 16
   - - -2.0
-    - 182
+    - 179
   - - -1.0
-    - 173
+    - 182
   - - 0.0
-    - 184
+    - 203
   - - 1.0
-    - 635
+    - 668
   - - 2.0
-    - 1001
+    - 1054
   - - 3.0
-    - 965
+    - 959
   - - 4.0
-    - 1670
+    - 1657
   - - 5.0
-    - 910
+    - 1070
   - - 6.0
-    - 559
+    - 584
   - - 7.0
-    - 406
+    - 420
   - - 8.0
-    - 61
+    - 48
   :winning_actions:
-    ? - board_slice: 2
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: tomato
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: egg
-        mystery_bird: nothing
-    : 2
     ? - board_slice: 0
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: aviary
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: fruit
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: aviary
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: mystery bird 01
-    : 2
-    ? - board_slice: 3
         card_1: aviary
         card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 02
-        card_2: tomato
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 05
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: tomato
-        card_2: bird 02
         mystery_bird: nothing
       - board_slice: 1
         card_1: fruit
-        card_2: bird 05
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
+        card_2: bird 04
         mystery_bird: nothing
       - board_slice: 0
         card_1: tomato
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
         card_2: bird 05
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: egg
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
         card_1: fruit
-        card_2: vegetable
-        mystery_bird: mystery bird 01
-      - board_slice: 0
+        card_2: bird 03
+        mystery_bird: nothing
+      - board_slice: 1
         card_1: aviary
         card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: bird 01
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 05
-        card_2: tomato
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: egg
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: mystery bird 01
-    : 2
-    ? - board_slice: 2
-        card_1: tomato
-        card_2: bird 01
         mystery_bird: nothing
       - board_slice: 2
+        card_1: vegetable
+        card_2: bird 01
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: bird 01
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: bird 03
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 05
+        card_2: tomato
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: mystery bird 01
+    : 2
+    ? - board_slice: 0
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 3
         card_1: bird 01
         card_2: fruit
         mystery_bird: nothing
       - board_slice: 1
-        card_1: bird 05
+        card_1: aviary
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
         card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: egg
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: mystery bird 01
+    : 2
+    ? - board_slice: 0
+        card_1: egg
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: tomato
+        card_2: bird 03
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: bird 04
+        card_2: tomato
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 05
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: bird 01
         mystery_bird: nothing
     : 2
   :losing_actions:
-    ? - board_slice: 1
-        card_1: vegetable
-        card_2: egg
+    ? - board_slice: 0
+        card_1: egg
+        card_2: vegetable
         mystery_bird: nothing
       - board_slice: 0
+        card_1: bird 03
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
         card_1: vegetable
-        card_2: bird 02
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 03
+        card_2: vegetable
         mystery_bird: nothing
       - board_slice: 1
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
         card_1: aviary
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: bird 03
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: fruit
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: bird 04
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
         card_2: egg
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: vegetable
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
+        card_1: fruit
         card_2: egg
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
+      - board_slice: 1
         card_1: bird 01
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
         card_2: vegetable
         mystery_bird: nothing
       - board_slice: 2
         card_1: bird 02
         card_2: vegetable
         mystery_bird: nothing
-      - board_slice: 1
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
         card_1: egg
-        card_2: bird 01
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: egg
+        card_2: vegetable
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: fruit
+        card_1: vegetable
         card_2: vegetable
         mystery_bird: nothing
       - board_slice: 0
         card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
         card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: bird 01
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: vegetable
-        card_2: bird 02
         mystery_bird: nothing
       - board_slice: 0
         card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
         card_2: egg
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: bird 02
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: fruit
+        card_1: fruit
+        card_2: bird 01
         mystery_bird: nothing
       - board_slice: 1
-        card_1: vegetable
+        card_1: aviary
         card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: egg
         mystery_bird: nothing
     : 2
     ? - board_slice: 3
-        card_1: fruit
-        card_2: bird 01
+        card_1: bird 01
+        card_2: fruit
         mystery_bird: nothing
       - board_slice: 1
         card_1: vegetable
         card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 02
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: aviary
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: egg
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 3
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 04
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 04
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: fruit
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: bird 05
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: aviary
-        card_2: vegetable
         mystery_bird: nothing
       - board_slice: 0
         card_1: fruit
         card_2: bird 04
         mystery_bird: nothing
-      - board_slice: 1
-        card_1: tomato
-        card_2: bird 02
-        mystery_bird: nothing
     : 2
     ? - board_slice: 0
         card_1: vegetable
         card_2: fruit
         mystery_bird: nothing
-      - board_slice: 0
+      - board_slice: 3
         card_1: aviary
-        card_2: bird 03
+        card_2: bird 04
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: vegetable
+        card_2: aviary
         mystery_bird: nothing
       - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 02
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: aviary
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: egg
+        card_2: tomato
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 3
         card_1: bird 04
         card_2: fruit
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
         card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: vegetable
+        card_2: bird 04
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
         card_2: bird 02
         mystery_bird: nothing
       - board_slice: 1
-        card_1: fruit
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
         card_1: vegetable
         card_2: vegetable
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
+      - board_slice: 3
+        card_1: egg
         card_2: egg
         mystery_bird: nothing
     : 2
-    ? - board_slice: 0
+    ? - board_slice: 3
+        card_1: vegetable
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: egg
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 1
         card_1: fruit
+        card_2: vegetable
+        mystery_bird: mystery bird 01
+    : 2
+    ? - board_slice: 0
+        card_1: bird 04
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 2
+        card_1: egg
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 04
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: aviary
         card_2: fruit
         mystery_bird: nothing
       - board_slice: 0
@@ -550,313 +433,404 @@
         card_2: vegetable
         mystery_bird: nothing
       - board_slice: 0
-        card_1: vegetable
-        card_2: bird 04
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: bird 04
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
         card_1: bird 02
         card_2: vegetable
         mystery_bird: nothing
     : 2
-    ? - board_slice: 2
-        card_1: vegetable
-        card_2: egg
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: vegetable
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
+      - board_slice: 2
         card_1: vegetable
-        card_2: egg
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: bird 01
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
         card_1: vegetable
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
         card_2: aviary
         mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: egg
+      - board_slice: 1
+        card_1: bird 04
         card_2: fruit
         mystery_bird: nothing
       - board_slice: 3
         card_1: vegetable
-        card_2: bird 04
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: aviary
-        card_2: vegetable
+        card_2: bird 02
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
         card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 03
         card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: egg
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
         card_1: aviary
         card_2: egg
         mystery_bird: nothing
-      - board_slice: 0
+      - board_slice: 1
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 2
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 01
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
         card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: bird 01
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: tomato
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
         card_2: fruit
         mystery_bird: nothing
       - board_slice: 0
         card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: vegetable
         card_2: vegetable
-        mystery_bird: mystery bird 01
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 02
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: tomato
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: aviary
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: aviary
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 04
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: bird 02
+        mystery_bird: nothing
     : 2
 2:
   :id: 2
   :greedy: true
   :random: false
-  :won: 2132
-  :lost: 6993
-  :tied: 875
+  :won: 1975
+  :lost: 7184
+  :tied: 841
   :winning_scores:
   - - 12.0
-    - 62
+    - 41
   - - 11.0
-    - 139
+    - 135
   - - 10.0
-    - 225
+    - 233
   - - 9.0
-    - 119
+    - 127
   - - 8.0
-    - 504
+    - 477
   - - 7.0
-    - 823
+    - 756
   - - 6.0
-    - 526
+    - 442
   - - 5.0
-    - 318
+    - 350
   - - 4.0
-    - 229
+    - 212
   - - 3.0
-    - 27
-  - - 2.0
-    - 32
-  - - 1.0
-    - 3
-  :losing_scores:
-  - - -5.0
-    - 1
-  - - -4.0
-    - 5
-  - - -3.0
     - 23
-  - - -2.0
-    - 211
-  - - -1.0
-    - 230
-  - - 0.0
-    - 197
-  - - 1.0
-    - 565
   - - 2.0
-    - 1149
+    - 17
+  - - 1.0
+    - 2
+  - - 0.0
+    - 1
+  :losing_scores:
+  - - -4.0
+    - 4
+  - - -3.0
+    - 26
+  - - -2.0
+    - 202
+  - - -1.0
+    - 221
+  - - 0.0
+    - 207
+  - - 1.0
+    - 620
+  - - 2.0
+    - 1115
   - - 3.0
-    - 985
+    - 983
   - - 4.0
-    - 1649
+    - 1756
   - - 5.0
-    - 976
+    - 966
   - - 6.0
-    - 583
+    - 577
   - - 7.0
-    - 370
+    - 448
   - - 8.0
-    - 49
+    - 59
   :winning_actions:
-    ? - board_slice: 1
-        card_1: egg
+    ? - board_slice: 3
+        card_1: fruit
+        card_2: bird 01
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
         card_2: aviary
         mystery_bird: nothing
       - board_slice: 0
-        card_1: egg
-        card_2: tomato
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: mystery bird 02
-    : 2
-    ? - board_slice: 1
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 2
         card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 2
+        card_1: egg
         card_2: egg
         mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
       - board_slice: 0
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: mystery bird 01
-    : 2
-    ? - board_slice: 0
         card_1: vegetable
         card_2: fruit
-        mystery_bird: nothing
+        mystery_bird: mystery bird 01
       - board_slice: 0
         card_1: fruit
         card_2: bird 03
         mystery_bird: nothing
-      - board_slice: 3
-        card_1: aviary
-        card_2: bird 01
-        mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
         card_1: vegetable
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 2
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: aviary
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
         card_2: egg
         mystery_bird: nothing
       - board_slice: 0
-        card_1: fruit
+        card_1: egg
         card_2: vegetable
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 03
-        card_2: vegetable
+      - board_slice: 1
+        card_1: fruit
+        card_2: fruit
+        mystery_bird: mystery bird 01
+    : 2
+    ? - board_slice: 0
+        card_1: tomato
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 01
+        card_2: aviary
         mystery_bird: nothing
     : 2
     ? - board_slice: 2
+        card_1: bird 01
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
         card_1: egg
         card_2: egg
         mystery_bird: nothing
       - board_slice: 0
         card_1: vegetable
-        card_2: aviary
+        card_2: vegetable
         mystery_bird: mystery bird 01
-      - board_slice: 1
+      - board_slice: 0
         card_1: fruit
         card_2: fruit
         mystery_bird: nothing
     : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: tomato
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: bird 02
+    ? - board_slice: 1
+        card_1: aviary
         card_2: vegetable
         mystery_bird: nothing
       - board_slice: 1
+        card_1: tomato
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 1
         card_1: vegetable
-        card_2: bird 04
+        card_2: bird 05
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 3
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 02
+        card_2: bird 01
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: aviary
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
         card_1: vegetable
-        card_2: egg
+        card_2: bird 03
         mystery_bird: nothing
       - board_slice: 0
-        card_1: bird 03
+        card_1: fruit
         card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 01
+        card_2: aviary
         mystery_bird: nothing
     : 2
     ? - board_slice: 3
         card_1: aviary
-        card_2: egg
+        card_2: tomato
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 01
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: fruit
+        card_2: bird 05
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: egg
+        card_2: aviary
         mystery_bird: nothing
       - board_slice: 0
-        card_1: egg
-        card_2: vegetable
+        card_1: vegetable
+        card_2: egg
         mystery_bird: nothing
       - board_slice: 1
         card_1: fruit
@@ -865,153 +839,153 @@
     : 2
   :losing_actions:
     ? - board_slice: 0
-        card_1: fruit
+        card_1: aviary
         card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: egg
+        card_2: bird 02
         mystery_bird: nothing
       - board_slice: 0
         card_1: egg
         card_2: aviary
         mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: tomato
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: tomato
+        mystery_bird: nothing
       - board_slice: 1
         card_1: vegetable
-        card_2: bird 01
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
+        card_2: vegetable
         mystery_bird: nothing
     : 2
     ? - board_slice: 1
-        card_1: vegetable
-        card_2: vegetable
+        card_1: egg
+        card_2: egg
         mystery_bird: nothing
+      - board_slice: 0
+        card_1: tomato
+        card_2: vegetable
+        mystery_bird: mystery bird 01
       - board_slice: 1
         card_1: vegetable
-        card_2: bird 02
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
         mystery_bird: nothing
       - board_slice: 3
-        card_1: egg
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: fruit
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
         card_1: bird 02
         card_2: vegetable
         mystery_bird: nothing
       - board_slice: 1
         card_1: egg
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 2
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: tomato
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: bird 04
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
         card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: egg
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 3
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: bird 02
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
         card_1: bird 04
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 03
-        card_2: vegetable
+        card_2: egg
         mystery_bird: nothing
       - board_slice: 1
         card_1: vegetable
-        card_2: fruit
+        card_2: egg
         mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: vegetable
+        mystery_bird: mystery bird 01
     : 2
     ? - board_slice: 0
         card_1: aviary
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: vegetable
         card_2: vegetable
         mystery_bird: nothing
       - board_slice: 0
+        card_1: fruit
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: egg
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: bird 01
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 1
         card_1: aviary
         card_2: vegetable
         mystery_bird: nothing
@@ -1021,120 +995,29 @@
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
         card_1: fruit
         card_2: aviary
         mystery_bird: nothing
       - board_slice: 0
-        card_1: fruit
-        card_2: tomato
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: bird 04
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 3
         card_1: egg
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: mystery bird 01
-      - board_slice: 1
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 05
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: egg
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 03
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: egg
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: mystery bird 01
-    : 2
-    ? - board_slice: 2
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: fruit
         card_2: bird 01
         mystery_bird: nothing
       - board_slice: 0
         card_1: egg
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: egg
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
         card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: aviary
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
@@ -1143,1124 +1026,1087 @@
         mystery_bird: nothing
       - board_slice: 0
         card_1: vegetable
-        card_2: fruit
+        card_2: aviary
         mystery_bird: nothing
       - board_slice: 1
-        card_1: fruit
+        card_1: tomato
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
         card_2: bird 02
         mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: bird 02
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
       - board_slice: 0
         card_1: fruit
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
         card_2: bird 04
         mystery_bird: nothing
     : 2
-    ? - board_slice: 0
-        card_1: egg
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: aviary
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-    : 2
     ? - board_slice: 1
         card_1: egg
         card_2: aviary
         mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 01
+        card_2: fruit
+        mystery_bird: nothing
       - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
         card_1: vegetable
         card_2: vegetable
         mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: aviary
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: egg
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 02
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: egg
+        card_2: bird 02
+        mystery_bird: nothing
       - board_slice: 0
         card_1: fruit
+        card_2: egg
+        mystery_bird: nothing
+    : 3
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: aviary
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
         card_2: bird 03
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: bird 01
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: aviary
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 01
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 3
+        card_1: bird 01
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: bird 04
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 01
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 2
+        card_1: bird 01
+        card_2: tomato
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: tomato
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 03
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: egg
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 01
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: mystery bird 01
+    : 3
+    ? - board_slice: 0
+        card_1: egg
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: aviary
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: egg
         mystery_bird: nothing
     : 2
 1:
   :id: 1
   :greedy: true
   :random: false
-  :won: 2094
-  :lost: 7025
-  :tied: 881
+  :won: 1712
+  :lost: 7457
+  :tied: 831
   :winning_scores:
   - - 12.0
-    - 48
+    - 33
   - - 11.0
-    - 101
+    - 82
   - - 10.0
-    - 238
+    - 171
   - - 9.0
-    - 91
+    - 85
   - - 8.0
-    - 457
+    - 431
   - - 7.0
-    - 862
+    - 740
   - - 6.0
-    - 516
+    - 449
   - - 5.0
-    - 359
+    - 287
   - - 4.0
-    - 235
+    - 221
   - - 3.0
-    - 39
+    - 25
   - - 2.0
-    - 26
+    - 17
   - - 1.0
-    - 3
-  :losing_scores:
-  - - -4.0
-    - 3
-  - - -3.0
-    - 21
-  - - -2.0
-    - 220
-  - - -1.0
-    - 260
+    - 1
   - - 0.0
-    - 162
+    - 1
+  :losing_scores:
+  - - -5.0
+    - 1
+  - - -4.0
+    - 2
+  - - -3.0
+    - 27
+  - - -2.0
+    - 186
+  - - -1.0
+    - 245
+  - - 0.0
+    - 185
   - - 1.0
-    - 511
+    - 575
   - - 2.0
-    - 1193
+    - 1276
   - - 3.0
-    - 1025
+    - 1021
   - - 4.0
-    - 1601
+    - 1711
   - - 5.0
-    - 988
+    - 986
   - - 6.0
-    - 590
+    - 687
   - - 7.0
-    - 400
+    - 487
   - - 8.0
-    - 51
+    - 68
   :winning_actions:
     ? - board_slice: 1
         card_1: egg
-        card_2: egg
+        card_2: aviary
         mystery_bird: nothing
       - board_slice: 1
         card_1: vegetable
-        card_2: fruit
-        mystery_bird: mystery bird 01
-      - board_slice: 0
-        card_1: fruit
-        card_2: aviary
+        card_2: egg
         mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: vegetable
+        mystery_bird: mystery bird 01
     : 2
-    ? - board_slice: 2
-        card_1: egg
+    ? - board_slice: 1
+        card_1: aviary
         card_2: egg
         mystery_bird: nothing
       - board_slice: 0
-        card_1: bird 05
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: tomato
-        card_2: aviary
-        mystery_bird: mystery bird 01
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 2
         card_1: bird 02
         card_2: vegetable
         mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
+      - board_slice: 2
         card_1: fruit
         card_2: vegetable
-        mystery_bird: mystery bird 01
+        mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 03
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
         card_1: egg
-        card_2: vegetable
+        card_2: egg
         mystery_bird: nothing
       - board_slice: 1
-        card_1: egg
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: mystery bird 01
-    : 2
-    ? - board_slice: 2
-        card_1: egg
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
         card_1: fruit
         card_2: vegetable
         mystery_bird: mystery bird 01
       - board_slice: 0
         card_1: vegetable
-        card_2: aviary
+        card_2: vegetable
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
+        card_1: vegetable
         card_2: aviary
         mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 05
+      - board_slice: 2
+        card_1: bird 02
         card_2: tomato
         mystery_bird: nothing
       - board_slice: 0
-        card_1: aviary
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: fruit
-        card_2: bird 03
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 3
         card_1: egg
         card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 03
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 2
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: aviary
         mystery_bird: nothing
     : 2
     ? - board_slice: 1
+        card_1: vegetable
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
         card_1: aviary
         card_2: egg
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
         card_2: aviary
         mystery_bird: nothing
       - board_slice: 3
-        card_1: vegetable
+        card_1: bird 02
         card_2: vegetable
-        mystery_bird: mystery bird 02
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: aviary
+        card_1: egg
         card_2: aviary
         mystery_bird: nothing
       - board_slice: 0
-        card_1: vegetable
-        card_2: bird 02
+        card_1: fruit
+        card_2: egg
         mystery_bird: nothing
       - board_slice: 1
-        card_1: fruit
+        card_1: vegetable
         card_2: vegetable
+        mystery_bird: mystery bird 01
+    : 2
+    ? - board_slice: 1
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 03
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 01
+        card_2: fruit
         mystery_bird: nothing
     : 2
   :losing_actions:
-    ? - board_slice: 3
-        card_1: bird 01
-        card_2: fruit
+    ? - board_slice: 1
+        card_1: vegetable
+        card_2: aviary
         mystery_bird: nothing
       - board_slice: 1
         card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
         card_2: bird 02
         mystery_bird: nothing
-      - board_slice: 1
+      - board_slice: 0
         card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: aviary
-        card_2: aviary
+        card_2: bird 02
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
         card_1: egg
         card_2: vegetable
         mystery_bird: nothing
-      - board_slice: 3
+      - board_slice: 0
         card_1: fruit
-        card_2: vegetable
+        card_2: bird 01
         mystery_bird: nothing
       - board_slice: 0
-        card_1: bird 02
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: bird 03
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: bird 04
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
         card_2: fruit
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: bird 04
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 2
+        card_1: fruit
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
         card_2: vegetable
         mystery_bird: nothing
       - board_slice: 2
         card_1: bird 02
         card_2: vegetable
         mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 01
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: egg
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 01
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: aviary
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: bird 01
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 2
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 01
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: egg
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 01
+        card_2: bird 04
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 02
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: aviary
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
       - board_slice: 0
         card_1: vegetable
         card_2: fruit
         mystery_bird: nothing
     : 2
-    ? - board_slice: 3
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 04
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: aviary
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
         card_1: egg
         card_2: egg
         mystery_bird: nothing
       - board_slice: 1
+        card_1: aviary
+        card_2: bird 01
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: aviary
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 01
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: fruit
+        card_2: bird 04
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 04
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: bird 04
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: bird 01
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
         card_1: bird 01
         card_2: fruit
         mystery_bird: nothing
       - board_slice: 1
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: egg
+        card_2: egg
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
         card_1: aviary
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: egg
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
         card_2: vegetable
         mystery_bird: mystery bird 01
     : 2
+    ? - board_slice: 1
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: egg
+        card_2: fruit
+        mystery_bird: nothing
+    : 2
     ? - board_slice: 0
         card_1: vegetable
         card_2: vegetable
         mystery_bird: nothing
       - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: vegetable
+        card_1: egg
         card_2: aviary
         mystery_bird: nothing
       - board_slice: 0
-        card_1: egg
-        card_2: bird 04
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
+        card_1: fruit
         card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: vegetable
         mystery_bird: nothing
     : 2
     ? - board_slice: 1
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
         card_1: fruit
         card_2: bird 01
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
       - board_slice: 1
+        card_1: egg
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 3
         card_1: bird 02
         card_2: tomato
         mystery_bird: nothing
-      - board_slice: 2
-        card_1: vegetable
-        card_2: bird 04
-        mystery_bird: nothing
     : 2
-    ? - board_slice: 3
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: aviary
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-    : 3
     ? - board_slice: 1
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: egg
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 2
         card_1: egg
         card_2: egg
         mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: bird 02
+      - board_slice: 1
+        card_1: vegetable
         card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: egg
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 3
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: bird 04
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 2
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: egg
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 2
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: egg
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 04
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
+        mystery_bird: mystery bird 01
       - board_slice: 0
         card_1: fruit
         card_2: aviary
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 01
-        card_2: egg
-        mystery_bird: nothing
     : 2
-    ? - board_slice: 2
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 01
-        card_2: fruit
+    ? - board_slice: 1
+        card_1: fruit
+        card_2: aviary
         mystery_bird: nothing
       - board_slice: 0
         card_1: vegetable
-        card_2: bird 02
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: bird 02
+        card_2: vegetable
         mystery_bird: nothing
     : 2
     ? - board_slice: 1
         card_1: vegetable
         card_2: aviary
         mystery_bird: nothing
-      - board_slice: 2
+      - board_slice: 1
         card_1: vegetable
         card_2: bird 02
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: bird 03
+      - board_slice: 3
+        card_1: egg
+        card_2: fruit
         mystery_bird: nothing
     : 2
     ? - board_slice: 2
-        card_1: fruit
-        card_2: bird 01
+        card_1: aviary
+        card_2: fruit
         mystery_bird: nothing
-      - board_slice: 2
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 1
+      - board_slice: 0
         card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: egg
+        card_2: bird 04
         mystery_bird: nothing
       - board_slice: 0
-        card_1: bird 02
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: aviary
-        card_2: bird 01
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 01
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 3
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 3
         card_1: tomato
-        card_2: bird 04
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: fruit
         card_2: egg
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: tomato
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: aviary
-        card_2: bird 02
-        mystery_bird: nothing
     : 2
-    ? - board_slice: 3
+    ? - board_slice: 0
         card_1: egg
         card_2: aviary
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
+      - board_slice: 1
         card_1: fruit
-        card_2: bird 02
+        card_2: egg
         mystery_bird: nothing
       - board_slice: 1
         card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
+        card_2: fruit
+        mystery_bird: mystery bird 01
     : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: bird 01
+    ? - board_slice: 2
+        card_1: egg
+        card_2: egg
         mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
+      - board_slice: 1
+        card_1: aviary
+        card_2: fruit
+        mystery_bird: mystery bird 01
       - board_slice: 1
         card_1: vegetable
         card_2: tomato
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 01
-        card_2: egg
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: bird 04
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 02
-        card_2: bird 01
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 2
-        card_1: aviary
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 2
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: fruit
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: aviary
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: bird 01
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 3
-        card_1: fruit
-        card_2: bird 01
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 02
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: egg
-        card_2: egg
         mystery_bird: nothing
     : 2
 0:
   :id: 0
   :greedy: false
   :random: false
-  :won: 1807
-  :lost: 7382
-  :tied: 811
+  :won: 2590
+  :lost: 6447
+  :tied: 963
   :winning_scores:
   - - 12.0
-    - 86
+    - 121
   - - 11.0
-    - 145
+    - 132
   - - 10.0
-    - 142
+    - 258
   - - 9.0
-    - 172
+    - 260
   - - 8.0
-    - 475
+    - 795
   - - 7.0
-    - 495
+    - 868
   - - 6.0
-    - 523
+    - 543
   - - 5.0
-    - 344
+    - 335
   - - 4.0
-    - 204
+    - 211
   - - 3.0
-    - 17
+    - 25
   - - 2.0
-    - 12
-  - - 1.0
-    - 3
+    - 5
   :losing_scores:
   - - -6.0
-    - 8
+    - 3
   - - -5.0
-    - 53
+    - 55
   - - -4.0
-    - 120
+    - 96
   - - -3.0
-    - 334
+    - 196
   - - -2.0
-    - 437
+    - 268
   - - -1.0
-    - 248
+    - 193
   - - 0.0
-    - 316
+    - 191
   - - 1.0
-    - 730
+    - 486
   - - 2.0
-    - 919
+    - 726
   - - 3.0
-    - 838
+    - 742
   - - 4.0
-    - 1594
+    - 1433
   - - 5.0
-    - 920
+    - 928
   - - 6.0
-    - 523
+    - 608
   - - 7.0
-    - 288
+    - 448
   - - 8.0
-    - 54
+    - 74
   :winning_actions:
-    ? - board_slice: 2
-        card_1: tomato
-        card_2: aviary
+    ? - board_slice: 0
+        card_1: aviary
+        card_2: tomato
         mystery_bird: nothing
-      - board_slice: 2
-        card_1: bird 05
-        card_2: aviary
-        mystery_bird: nothing
-      - board_slice: 1
+      - board_slice: 3
         card_1: vegetable
-        card_2: bird 02
+        card_2: bird 03
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: bird 05
         mystery_bird: nothing
     : 2
     ? - board_slice: 1
-        card_1: egg
-        card_2: bird 03
-        mystery_bird: nothing
-      - board_slice: 3
         card_1: tomato
-        card_2: bird 05
+        card_2: aviary
         mystery_bird: nothing
-      - board_slice: 0
+      - board_slice: 1
+        card_1: bird 05
+        card_2: bird 01
+        mystery_bird: nothing
+      - board_slice: 1
         card_1: vegetable
         card_2: fruit
         mystery_bird: nothing
     : 2
     ? - board_slice: 0
-        card_1: aviary
-        card_2: vegetable
+        card_1: vegetable
+        card_2: aviary
         mystery_bird: nothing
       - board_slice: 0
-        card_1: bird 05
-        card_2: tomato
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 01
+        card_1: egg
         card_2: egg
         mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
+      - board_slice: 2
         card_1: fruit
-        card_2: egg
+        card_2: fruit
+        mystery_bird: mystery bird 01
+    : 2
+    ? - board_slice: 0
+        card_1: fruit
+        card_2: bird 05
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: bird 03
+        card_2: tomato
         mystery_bird: nothing
       - board_slice: 0
         card_1: vegetable
-        card_2: bird 03
-        mystery_bird: nothing
-      - board_slice: 2
-        card_1: egg
-        card_2: vegetable
+        card_2: egg
         mystery_bird: nothing
     : 2
-    ? - board_slice: 1
-        card_1: aviary
-        card_2: vegetable
+    ? - board_slice: 2
+        card_1: bird 03
+        card_2: aviary
+        mystery_bird: nothing
+      - board_slice: 2
+        card_1: vegetable
+        card_2: egg
         mystery_bird: nothing
       - board_slice: 0
-        card_1: tomato
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 05
-        card_2: bird 04
+        card_1: fruit
+        card_2: egg
         mystery_bird: nothing
     : 2
   :losing_actions:
-    ? - board_slice: 2
+    ? - board_slice: 3
+        card_1: vegetable
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: egg
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: vegetable
+        card_2: aviary
+        mystery_bird: mystery bird 01
+    : 2
+    ? - board_slice: 1
+        card_1: vegetable
+        card_2: fruit
+        mystery_bird: nothing
+      - board_slice: 3
+        card_1: egg
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: bird 03
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 0
+        card_1: bird 02
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: fruit
+        card_2: vegetable
+        mystery_bird: nothing
+      - board_slice: 1
+        card_1: vegetable
+        card_2: bird 04
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
         card_1: vegetable
         card_2: aviary
         mystery_bird: nothing
-      - board_slice: 3
+      - board_slice: 2
+        card_1: vegetable
+        card_2: bird 02
+        mystery_bird: nothing
+      - board_slice: 0
+        card_1: fruit
+        card_2: aviary
+        mystery_bird: nothing
+    : 2
+    ? - board_slice: 1
+        card_1: vegetable
+        card_2: tomato
+        mystery_bird: nothing
+      - board_slice: 0
         card_1: bird 01
-        card_2: tomato
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: fruit
-        card_2: tomato
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: fruit
-        card_2: bird 02
-        mystery_bird: mystery bird 01
-    : 2
-    ? - board_slice: 3
-        card_1: tomato
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
         card_2: bird 02
         mystery_bird: nothing
       - board_slice: 0
-        card_1: bird 03
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: aviary
-        card_2: tomato
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 02
-        card_2: egg
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: vegetable
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
-        card_2: bird 02
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 05
-        card_2: vegetable
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: bird 03
-        card_2: tomato
-        mystery_bird: nothing
-      - board_slice: 0
         card_1: fruit
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: egg
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: bird 03
-        mystery_bird: nothing
-      - board_slice: 3
-        card_1: aviary
-        card_2: fruit
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 0
-        card_1: fruit
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: bird 02
-        card_2: vegetable
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: bird 03
-        card_2: bird 01
-        mystery_bird: nothing
-    : 2
-    ? - board_slice: 1
-        card_1: bird 03
-        card_2: fruit
-        mystery_bird: nothing
-      - board_slice: 1
-        card_1: vegetable
-        card_2: bird 05
-        mystery_bird: nothing
-      - board_slice: 0
-        card_1: vegetable
         card_2: vegetable
         mystery_bird: nothing
     : 2
