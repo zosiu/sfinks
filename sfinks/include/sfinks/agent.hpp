@@ -5,25 +5,18 @@
 #include <unordered_map>
 #include <vector>
 
-#include <sfinks/action_result.hpp>
-
 #include <cereal/access.hpp>
+#include <cereal/cereal.hpp>
+
+#include <sfinks/action_result.hpp>
 
 namespace sfinks {
 
-struct LearningParams {
-  static constexpr double default_exploration_rate = 0.4;
-  static constexpr double default_learning_rate = 0.2;
-  static constexpr double default_decay_gamma = 0.9;
-
-  double exploration_rate = default_exploration_rate;
-  double learning_rate = default_learning_rate;
-  double decay_gamma = default_decay_gamma;
-};
-
 class Agent {
 public:
-  Agent(bool greedy = false, LearningParams learning_params = LearningParams());
+  static constexpr double default_exploration_rate = 0.4;
+
+  Agent(bool greedy = false);
   void reset();
   void set_exploration_rate(double exploration_rate);
   void set_greedy(bool greedy);
@@ -50,10 +43,20 @@ private:
   [[nodiscard]] auto greedy_action(const std::vector<ActionResult<ActionId>> &action_results) const
       -> ActionResult<ActionId>;
 
-  bool _greedy;
-  LearningParams _learning_params;
+  double _exploration_rate = default_exploration_rate;
+  bool _greedy = false;
   std::list<std::string> _states_seen;
-  std::unordered_map<std::string, double> _state_values;
+
+  struct StateInfo {
+    double value = 0;
+    size_t times_seen = 0;
+
+    template <class Archive>
+    void serialize(Archive &archive) {
+      archive(CEREAL_NVP(value), CEREAL_NVP(times_seen));
+    }
+  };
+  std::unordered_map<std::string, StateInfo> _state_values;
 };
 
 } // namespace sfinks

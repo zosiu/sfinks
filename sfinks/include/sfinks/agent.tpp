@@ -23,7 +23,7 @@ auto Agent::choose_action(const std::vector<ActionResult<ActionId>> &action_resu
   std::uniform_real_distribution<> uniform(0.0, 1.0);
 
   const auto &[action_id, state, score] =
-      uniform(rng) < _learning_params.exploration_rate ? random_action(action_results) : policy_action(action_results);
+      uniform(rng) < _exploration_rate ? random_action(action_results) : policy_action(action_results);
   _states_seen.push_front(state);
   return action_id;
 }

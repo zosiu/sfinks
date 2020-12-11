@@ -31,7 +31,7 @@ history.each do |record|
       pdata[:winning_scores][pres['value']['result']] +=1
       actions = record['actions'].select { |act| act['tuple_element0'] == pid }.map { |x| x['tuple_element1'] }
       pdata[:winning_actions][actions] += 1
-      pdata[:first_action_when_won][actions.first['color_taken']] += 1
+      pdata[:first_action_when_won][actions.first] += 1
       if tie
         pdata[:tied] += 1;
       else

@@ -36,8 +36,10 @@ Engine<PlayerId, ActionId, ResourceId>::Engine(Game<PlayerId, ActionId, Resource
 
 template <typename PlayerId, typename ActionId, typename ResourceId>
 void Engine<PlayerId, ActionId, ResourceId>::learn(size_t number_of_games_to_play) {
+  // load_agents_data();
+
   for (auto &[player_id, agent] : _agents)
-    agent.set_exploration_rate(LearningParams::default_exploration_rate);
+    agent.set_exploration_rate(Agent::default_exploration_rate);
 
   for (size_t i = 0; i < number_of_games_to_play; i++)
     play_a_single_game(false);
@@ -235,12 +237,9 @@ void Engine<PlayerId, ActionId, ResourceId>::play_a_single_game(bool record_hist
                            return p1.second < p2.second;
                          })->second;
 
-  constexpr double winning_reward = 1.0;
-  constexpr double losing_penalty = -0.1;
   for (auto &[player_id, agent] : _agents)
-    agent.process_reward(std::fabs(scores[player_id] - winning_score) <= std::numeric_limits<double>::epsilon()
-                             ? winning_reward
-                             : losing_penalty);
+    agent.process_reward(std::fabs(scores[player_id] - winning_score) <= std::numeric_limits<double>::epsilon() ? 1.0
+                                                                                                                : -1.0);
 
   if (history != nullptr) {
     std::unordered_map<PlayerId, AgentScore> results;
