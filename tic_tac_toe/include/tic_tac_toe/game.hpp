@@ -11,8 +11,8 @@ constexpr int board_size = 9;
 using Board = std::array<Mark, board_size>;
 
 using PlayerId = Mark;
-using ActionId = int;
-using ResourceId = int;
+using ActionId = size_t;
+using ResourceId = size_t;
 
 class Game : public sfinks::Game<PlayerId, ActionId, ResourceId> {
 public:

@@ -41,7 +41,10 @@ auto Game::resource_count_for_player(const ResourceId &resource_id, const Player
   return _board.at(resource_id) == player_id ? 1 : 0;
 }
 
-void Game::reset() { _board.fill(Mark::none); }
+void Game::reset() {
+  _board.fill(Mark::none);
+  _current_player = Mark::x;
+}
 
 void Game::perform_action(const ActionId &action_id, const PlayerId &player_id) {
   if (_board.at(action_id) != Mark::none || is_over())
