@@ -47,3 +47,5 @@ CMakeSettings.json
 
 stats/**/*.json
 stats/**/*.tex
+
+.DS_Store
