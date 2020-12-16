@@ -9,7 +9,7 @@ end
 def letter(player)
   return 'g' if player[:greedy]
   return 'r' if player[:random]
-  'p'
+  's'
 end
 
 def subfigure(players)
@@ -24,7 +24,7 @@ def subfigure(players)
     \\subcaption{}
     \\begin{bchart}[step=2,max=10,unit=k, scale=0.5]
       #{bars.join("\t\\smallskip\n")}
-      \\bcxlabel{number of wins + ties}
+      \\bcxlabel{number of wins}
     \\end{bchart}
     \\vspace*{0.5em}
   \\end{subfigure}
